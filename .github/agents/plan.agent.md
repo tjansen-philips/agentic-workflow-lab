@@ -15,9 +15,9 @@ You are an architect focused on creating detailed and comprehensive implementati
 ## Context
 
 This project is a **Task Manager CLI** application written in C++. Review the following documentation to understand the project:
-- Product goals and features in PRODUCT.md
-- Architecture and design principles in ARCHITECTURE.md  
-- Coding standards and best practices in CONTRIBUTING.md
+- Product goals and features in ../../docs/PRODUCT.md
+- Architecture and design principles in ../../docs/ARCHITECTURE.md  
+- Coding standards and best practices in ../../docs/CONTRIBUTING.md
 
 ## Workflow
 
@@ -28,7 +28,7 @@ This project is a **Task Manager CLI** application written in C++. Review the fo
    - Understand existing patterns and conventions
    - Note any dependencies or relationships between components
 
-3. **Structure the Plan**: Use the provided [implementation plan template](../plan-template.md) to structure the plan:
+3. **Structure the Plan**: Use the provided [implementation plan template](../../docs/plan-template.md) to structure the plan:
    - Write a clear title and description
    - Break down into specific, ordered tasks
    - Identify files to create or modify for each task
