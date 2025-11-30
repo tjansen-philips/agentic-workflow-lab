@@ -182,38 +182,52 @@ Use the handoff link in the planning agent’s response (for example: “Start I
    - Verify code follows the C++17 standard and style guide
    - Confirm tests are included (if TDD agent was used)
 
-### Step 4: Build and Test the Application
+### Step 5: Build and Test the Application
 
-1. **Build the application**:
- 
-2. **Add some tasks**:
+Verify the CLI works end‑to‑end.
 
-3. **List tasks**:
-   
-4. **Complete a task**:
+1. **Build the application**  
+   Use your project build setup (e.g., CMake, Make, or VS Code task).
+2. **Run the CLI**  
+3. **Add some tasks**  
+4. **List tasks**  
+5. **Complete a task**  
   
-### Step 5: Add a Document Agent
-Create a complete workflow, add a Document agent:
+### Step 6: Add a Document Agent
+Establish a full workflow by adding a documentation-focused agent that finalizes and updates project docs after code implementation.
 
-1. Plan agent creates detailed plan
-2. TDD agent implements with tests
-3. Document agent updates documentation - this agent you will add in this step
+Workflow sequence:
+1. Planning: Plan agent creates detailed plan
+2. Implementation: TDD agent writes code + tests
+3. Documentation: Document agent updates README + docs (added in this step)
 
-**To create the document agent:**
-
-1. **Create a new file**: `.github/agents/document.agent.md`
-2. **Define the agent's role**: Documentation and README updates
-3. **Configure handoffs**: From TDD agent to document agent
-4. **Test the agent**: Plan → Implement → Document. For the sake of time you can also can test the document agent using it directly. 
+Create the document agent:
+1. File: Create `.github/agents/document.agent.md or add it from agents picker in the chat`
+2. Role: Focus ONLY on documentation
+3. Handoff: Configure it to receive from `tdd` (implementation) agent
+4. Test: Run the workflow (Plan → Implement → Document) or invoke the document agent directly for a quick trial
 
 #### Visual Guide
 ![Custom Agent Creation](img/custom%20agent.png)
 
+### Step 7: Commit changes and create a PR:
+Use your preferred way to commit changes and create a PR on GitHub.  
+
 **Commit changes**
+```bash
+# Stage all changes
+git add .
 
-**Create PR**
+# Commit with a descriptive message
+git commit -m "implement Task Manager CLI application"
 
-## Exercise 8 — Copilot as a Reviewer
+# Push to your feature branch
+git push origin feature/task-manager
+```
+
+**Create a pull request**
+
+### Step 8 — Copilot as a Reviewer
 
 **Where you work:** On **GitHub.com**, inside your open Pull Request.
 
@@ -226,23 +240,63 @@ Create a complete workflow, add a Document agent:
 #### Visual Guide
 ![Lab Instructions](img/review.png)
 
+### Step 9 — Merge to PR to your fork's main branch. 
 
-## Exercise 9 — Use MCP server
-Go back to VS Code IDE. 
-Let's use Github MCP server. 
+### Step 10 — Use the GitHub MCP Server
 
-In Agent Mode, ask to review the application and provide list of improvements. 
+Leverage the GitHub MCP server to automate review and issue creation directly from VS Code.
 
-Prompt: 
+Prerequisites:
+1. Server shows as `Running` (see Step 1 setup).
+2. MCP server is enabled in Copilot Chat tools picker.
 
-Next prompt: 
-For the first top 3 improvements create an issue on github. 
+Goal:
+1. Generate a structured improvement report.
+2. Automatically create issues for the highest‑priority items.
 
-The MCP server should create the issues. 
-Go to github.com and valide that issues were created. 
+Workflow:
+1. **Checkout the main branch**  
+   ```bash
+   git checkout main
+   git pull origin main
+   ``` 
+2. Open Copilot Chat (Agent Mode).
+3. (Optional) Select a planning or default agent; ensure MCP tools are active.
+4. Send the Review Prompt below.
+5. Inspect the response and optionally refine.
+6. Send the Issue Creation Prompt to open GitHub issues.
+7. Verify issues on GitHub.com.
+
+Review Prompt (copy into chat):
+```
+Review the repository. List the top 5 improvement opportunities grouped by category:
+Architecture, Code Quality, Testing, Documentation.
+For each item provide:
+- Short title
+- One sentence justification
+- Priority (High | Medium | Low)
+- Suggested acceptance criteria (bullet list)
+Return as a markdown table.
+```
+
+Issue Creation Prompt (after you agree with the list):
+```
+For the top 3 HIGH priority items, create GitHub issues. Each issue must include:
+- Clear title
+- Problem statement (why it matters)
+- Proposed solution outline
+- Acceptance criteria (bullet list)
+- Labels: enhancement, prioritization/high
+Respond with confirmation and the created issue numbers.
+```
+
+Verification:
+1. Open GitHub in browser → Issues tab.
+2. Confirm 3 new issues exist with correct labels and structured description.
+3. Check acceptance criteria clarity; edit manually if further refinement needed.
 
 
-## Exercise 10 — Assign Coding agent for a selected issue
+### Step 11 — Assign Coding agent for a selected issue
 **Where you work:** On **GitHub.com**, in the Issue UI.
 
 **What and why:**
@@ -264,11 +318,8 @@ Copilot Agents can take an issue, create a branch, and open a draft PR with code
 
 This will trigger the automated workflow where Copilot begins implementing your feature request while you maintain oversight and responsibility for the final outcome.
 
-
-TODO: Agents file
 #### Visual Guide
 ![Lab Instructions](img/coding%20agent.png)
-
 
 ### 2. Observe the automation
 
@@ -276,16 +327,22 @@ Watch as Copilot opens a branch and draft PR implementing the feature automatica
 
 ### That is it for today, well done!
 
-### Best Practices Learned
-1. **Start with clear documentation** - Product, Architecture, Contributing
-2. **Use custom instructions** - Automatic context for all interactions
-3. **Create specialized agents** - Separate planning from implementation
-4. **Define templates** - Ensure consistent output structure
-5. **Iterate and refine** - Update context based on observed AI behavior
+### Labs Summary
+The lab walked through a practical, agent‑assisted workflow to design, implement, document, and operationalize a C++ Task Manager CLI using GitHub Copilot and the GitHub MCP server.
 
-### Custom Agents vs Tools
-- **Custom agents** have specialized personas and workflows
-- **Handoffs** create guided transitions between agents
-- **Prompt files** add variants to the same workflow
-- **Instructions** provide persistent, project-wide context
+Highlights:
+- Context setup: Documentation (`PRODUCT.md`, `ARCHITECTURE.md`, `CONTRIBUTING.md`) and project‑wide custom instructions for consistent AI guidance.
+- Planning: A dedicated `plan` agent generates an implementation plan aligned to architecture and coding standards, using `docs/plan-template.md` and prompt files.
+- Implementation: The `tdd` agent autonomously creates code and tests following the plan and C++17 style guidelines.
+- Documentation: A `document` agent finalizes README, product status, and usage notes.
+- Git workflow: Commit and push changes on a feature branch; open a PR via GitHub CLI or web.
+- Review & issues: Use the GitHub MCP server to produce a prioritized improvement report and automatically create issues for top items.
+- Automation: Assign Copilot (Coding Agent) to an issue to open a branch and draft PR implementing the feature.
+
+Key Practices:
+- Start with clear, authoritative documentation; keep agents anchored to architecture and standards.
+- Separate concerns via specialized agents (plan → implement → document) and explicit handoffs.
+- Use templates and prompt files for consistent, high‑quality outputs.
+- Iterate: refine instructions, prompts, and agent scopes based on observed behavior.
+- Leverage MCP for repository automation (reviews, issues) and Copilot Coding Agent for hands‑on implementation.
 
