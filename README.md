@@ -9,6 +9,8 @@ By completing this lab, you will learn how to:
 - Create custom agents for planning and implementation
 - Use prompt files to define reusable workflows
 - Guide AI to generate high-quality, architecture-aligned code
+- Leverage MCP servers for GitHub automation
+- Utilize Copilot's coding agent for autonomous feature implementation
 
 ## Prerequisites
 
@@ -56,35 +58,47 @@ To complete the hands-on labs, ensure you have the following:
 
 You are set. If **github/github-mcp-server** does not show as Running, run **MCP: List Servers** again, or reload the window with **Developer: Reload Window**, then repeat step 5 to confirm the tool is checked.
 
-### Create a fork of the repository 
-### Create a feature branch 
-Create a feature branch and push it to the repo. The changes you make will go on that branch, and you'll create a Pull Request later.
+### GitHub Repository Setup
+
+1. **Fork this repository** to your GitHub account
+2. **Clone your fork** locally:
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/agentic-workflow-lab.git
+   cd agentic-workflow-lab
+   ```
+3. **Create a feature branch** for your work:
+   ```bash
+   git checkout -b feature/task-manager
+   git push -u origin feature/task-manager
+   ```
+
+> **Note:** All changes you make will go on this feature branch. You'll create a Pull Request later to merge your work.
 
 ## 🏗️ Application Overview
 
-In this lab, you'll implement a **Task Manager CLI** - a command-line task management application for developers. 
+In this lab, you'll implement a **Task Manager CLI** - a command-line task management application for developers.
 
 ## 📚 Lab Structure
 
-This repository contains the context engineering setup:
+This repository contains a context engineering setup to guide AI interactions:
 
-### Documentation Files
-- **PRODUCT.md** - Product vision, features, and goals
-- **ARCHITECTURE.md** - System design and architectural patterns
-- **CONTRIBUTING.md** - Code style, best practices, and guidelines
+### 📄 Documentation Files
+- **`docs/PRODUCT.md`** - Product vision, features, and goals
+- **`docs/ARCHITECTURE.md`** - System design and architectural patterns
+- **`docs/CONTRIBUTING.md`** - Code style, best practices, and guidelines
 
-### Custom Instructions
-- **.github/copilot-instructions.md** - Project-wide context automatically included in all AI interactions
+### ⚙️ Custom Instructions
+- **`.github/copilot-instructions.md`** - Project-wide context automatically included in all AI interactions
 
-### Custom Agents
-- **.github/agents/plan.agent.md** - Planning agent for creating implementation plans
-- **.github/agents/tdd.agent.md** - TDD implementation agent for writing code
+### 🤖 Custom Agents
+- **`.github/agents/plan.agent.md`** - Planning agent for creating detailed implementation plans
+- **`.github/agents/tdd.agent.md`** - TDD implementation agent for writing code with tests
 
-### Templates
-- **plan-template.md** - Template structure for implementation plans
+### 📋 Templates
+- **`docs/plan-template.md`** - Structured template for implementation plans
 
-### Prompt Files
-- **.github/prompts/plan-qna.prompt.md** - Planning prompt with clarifying questions
+### 💬 Prompt Files
+- **`.github/prompts/plan-qna.prompt.md`** - Planning prompt with clarifying questions
 
 ## 🚀 Lab Steps
 
@@ -109,38 +123,46 @@ This repository contains the context engineering setup:
    - Open `plan-template.md` to see the implementation plan structure
    - Open `.github/prompts/plan-qna.prompt.md` for the clarifying questions prompt
   
-### Step 2: Add custom instructions for testing guidelines:
-From VS Code command palette:
+### Step 2: Add Custom Instructions for Testing Guidelines
+
+Enhance your project context by adding testing guidelines to custom instructions.
+
+1. **Open VS Code Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P`)
+2. **Type and select**: `New instructions file`
+3. **Add testing-specific guidelines** to complement the existing context
 
 #### Visual Guide
 ![Lab Instructions](img/lab%20instructions.png)
 
+> **Tip:** Custom instructions create persistent context that helps Copilot understand your project's conventions and standards.
+
 ### Step 3: Create an Implementation Plan
 
-Now you'll use the planning agent to create a detailed implementation plan.
+Use the planning agent to create a detailed, structured implementation plan.
 
-1. **Open GitHub Copilot Chat** in VS Code
+1. **Open GitHub Copilot Chat** in VS Code (`Ctrl+Shift+I` or `Cmd+Shift+I`)
 
-2. **Select the `plan` agent** from the agent picker in the chat interface
+2. **Choose one of these approaches**:
+   
+   **Option A - Use the plan agent directly:**
+   - Select `plan` from the agent picker in the chat interface
+   - Type: `Create an implementation plan for the Task Manager CLI application as described in PRODUCT.md`
+   
+   **Option B - Use the prompt file:**
+   - Type: `/plan-qna Add a Task Manager CLI application for managing tasks`
 
-3. **Alternatively, use the prompt file** by typing:
-   ```
-   /plan-qna Add a Task Manager CLI application for managing tasks
-   ```
+3. **Answer any clarifying questions** the agent asks about:
+   - Feature priorities
+   - Implementation details
+   - Testing approach
 
-4. **Or directly ask the plan agent**:
-   ```
-   @plan Create an implementation plan for the Task Manager CLI application as described in PRODUCT.md
-   ```
+4. **Review the generated plan**:
+   - ✅ Follows the `plan-template.md` structure
+   - ✅ Breaks down into clear, actionable tasks
+   - ✅ Aligns with `ARCHITECTURE.md` design principles
+   - ✅ Includes test considerations
 
-5. **Answer any clarifying questions** the agent asks
-
-6. **Review the generated plan**:
-   - Does it follow the plan-template.md structure?
-   - Does it break down into clear, actionable tasks?
-   - Does it align with ARCHITECTURE.md design?
-
-### Step 3: Implement Using Agent Mode
+### Step 4: Implement Using Agent Mode
 
 Once the implementation plan is ready, use the TDD implementation agent to write the code.
 
@@ -175,10 +197,17 @@ Create a complete workflow, add a Document agent:
 
 1. Plan agent creates detailed plan
 2. TDD agent implements with tests
-3. Document agent updates documentation
+3. Document agent updates documentation - this agent you will add in this step
+
+**To create the document agent:**
+
+1. **Create a new file**: `.github/agents/document.agent.md`
+2. **Define the agent's role**: Documentation and README updates
+3. **Configure handoffs**: From TDD agent to document agent
+4. **Test the agent**: Plan → Implement → Document. For the sake of time you can also can test the document agent using it directly. 
 
 #### Visual Guide
-![Lab Instructions](img/custom%20agent.png)
+![Custom Agent Creation](img/custom%20agent.png)
 
 **Commit changes**
 
