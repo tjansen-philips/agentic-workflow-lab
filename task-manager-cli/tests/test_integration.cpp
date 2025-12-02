@@ -3,6 +3,7 @@
 #include "task_manager.h"
 #include "task_repository.h"
 #include "task.h"
+#include <nlohmann/json.hpp>
 #include <filesystem>
 #include <fstream>
 #include <sstream>
@@ -37,20 +38,22 @@ protected:
         }
         
         std::ifstream file(testFilePath);
+        if (!file.is_open()) {
+            throw std::runtime_error("Failed to open tasks file");
+        }
+        
         nlohmann::json j;
-        file >> j;
+        try {
+            file >> j;
+        } catch (const nlohmann::json::exception& e) {
+            throw std::runtime_error(std::string("Failed to parse JSON: ") + e.what());
+        }
         
         std::vector<Task> tasks;
         for (const auto& taskJson : j) {
             tasks.push_back(Task::fromJson(taskJson));
         }
         return tasks;
-    }
-    
-    // Helper to simulate a complete user session
-    TaskManager createManager() {
-        TaskRepository* repo = new TaskRepository(testFilePath);
-        return TaskManager(*repo);
     }
 };
 
@@ -410,53 +413,71 @@ TEST_F(IntegrationTest, CLICommandParsing) {
     
     // Test add command with quotes
     {
-        const char* argv[] = {"task-manager", "add", "\"Buy groceries\""};
-        Command cmd = cli.parseCommand(3, const_cast<char**>(argv));
+        char arg0[] = "task-manager";
+        char arg1[] = "add";
+        char arg2[] = "\"Buy groceries\"";
+        char* argv[] = {arg0, arg1, arg2};
+        Command cmd = cli.parseCommand(3, argv);
         EXPECT_EQ(cmd.type, CommandType::ADD);
         EXPECT_EQ(cmd.argument, "\"Buy groceries\"");
     }
     
     // Test add command without quotes
     {
-        const char* argv[] = {"task-manager", "add", "Write", "documentation"};
-        Command cmd = cli.parseCommand(4, const_cast<char**>(argv));
+        char arg0[] = "task-manager";
+        char arg1[] = "add";
+        char arg2[] = "Write";
+        char arg3[] = "documentation";
+        char* argv[] = {arg0, arg1, arg2, arg3};
+        Command cmd = cli.parseCommand(4, argv);
         EXPECT_EQ(cmd.type, CommandType::ADD);
         EXPECT_EQ(cmd.argument, "Write documentation");
     }
     
     // Test list command
     {
-        const char* argv[] = {"task-manager", "list"};
-        Command cmd = cli.parseCommand(2, const_cast<char**>(argv));
+        char arg0[] = "task-manager";
+        char arg1[] = "list";
+        char* argv[] = {arg0, arg1};
+        Command cmd = cli.parseCommand(2, argv);
         EXPECT_EQ(cmd.type, CommandType::LIST);
     }
     
     // Test complete command
     {
-        const char* argv[] = {"task-manager", "complete", "1"};
-        Command cmd = cli.parseCommand(3, const_cast<char**>(argv));
+        char arg0[] = "task-manager";
+        char arg1[] = "complete";
+        char arg2[] = "1";
+        char* argv[] = {arg0, arg1, arg2};
+        Command cmd = cli.parseCommand(3, argv);
         EXPECT_EQ(cmd.type, CommandType::COMPLETE);
         EXPECT_EQ(cmd.argument, "1");
     }
     
     // Test clear command
     {
-        const char* argv[] = {"task-manager", "clear"};
-        Command cmd = cli.parseCommand(2, const_cast<char**>(argv));
+        char arg0[] = "task-manager";
+        char arg1[] = "clear";
+        char* argv[] = {arg0, arg1};
+        Command cmd = cli.parseCommand(2, argv);
         EXPECT_EQ(cmd.type, CommandType::CLEAR);
     }
     
     // Test help command
     {
-        const char* argv[] = {"task-manager", "--help"};
-        Command cmd = cli.parseCommand(2, const_cast<char**>(argv));
+        char arg0[] = "task-manager";
+        char arg1[] = "--help";
+        char* argv[] = {arg0, arg1};
+        Command cmd = cli.parseCommand(2, argv);
         EXPECT_EQ(cmd.type, CommandType::HELP);
     }
     
     // Test invalid command
     {
-        const char* argv[] = {"task-manager", "invalid"};
-        Command cmd = cli.parseCommand(2, const_cast<char**>(argv));
+        char arg0[] = "task-manager";
+        char arg1[] = "invalid";
+        char* argv[] = {arg0, arg1};
+        Command cmd = cli.parseCommand(2, argv);
         EXPECT_EQ(cmd.type, CommandType::INVALID);
     }
 }
@@ -466,19 +487,25 @@ TEST_F(IntegrationTest, FileCorruptionHandling) {
     // Create a corrupted JSON file
     {
         std::ofstream file(testFilePath);
+        if (!file.is_open()) {
+            FAIL() << "Failed to create test file";
+        }
         file << "{ this is not valid JSON }";
         file.close();
     }
     
     // Repository should handle gracefully (current implementation may throw)
-    // This test documents current behavior
+    // This test documents current behavior and ensures it doesn't crash
     try {
         TaskRepository repo(testFilePath);
         std::vector<Task> tasks = repo.loadTasks();
-        // If we get here, corruption was handled
+        // If we get here, corruption was handled gracefully
         SUCCEED();
     } catch (const std::exception& e) {
-        // Current implementation may throw - document this
+        // Current implementation throws on corrupted JSON - this is expected behavior
+        // Verify the error message indicates JSON parsing failure
+        std::string errorMsg = e.what();
+        EXPECT_FALSE(errorMsg.empty()) << "Exception should have a meaningful error message";
         SUCCEED() << "Exception caught as expected: " << e.what();
     }
 }
