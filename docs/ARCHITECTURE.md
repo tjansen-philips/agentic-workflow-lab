@@ -2,7 +2,7 @@
 
 ## System Overview
 
-The Task Manager CLI is a single-executable command-line application with a layered architecture that separates concerns between presentation, business logic, and data persistence. Built in C++17 with test-driven development, featuring comprehensive unit tests (41 tests total).
+The Task Manager CLI is a single-executable command-line application with a layered architecture that separates concerns between presentation, business logic, and data persistence. Built in C++17 with test-driven development, featuring comprehensive test coverage (52 tests total: 41 unit tests + 11 integration tests, >90% code coverage).
 
 ## Implementation Details
 
@@ -46,10 +46,19 @@ The Task Manager CLI is a single-executable command-line application with a laye
 - Input validation at CLI boundary
 
 ## Tests
-- **Unit Tests**: 41 tests covering all layers (100% pass rate)
-  - Task: 6 tests (data model, JSON serialization)
-  - TaskRepository: 9 tests (file I/O, ID management, clear functionality)
-  - TaskManager: 13 tests (business logic, persistence, clear operations)
-  - CLI: 13 tests (command parsing, display, help text)
+- **Total Tests**: 52 tests (100% pass rate)
+  - **Unit Tests**: 41 tests covering all layers
+    - Task: 6 tests (data model, JSON serialization)
+    - TaskRepository: 9 tests (file I/O, ID management, clear functionality)
+    - TaskManager: 13 tests (business logic, persistence, clear operations)
+    - CLI: 13 tests (command parsing, display, help text)
+  - **Integration Tests**: 11 tests verifying end-to-end workflows
+    - Complete user workflows from command input to file persistence
+    - Cross-session persistence and data integrity
+    - Multi-command sequences and edge cases
+    - Real file I/O operations with actual JSON storage
+- **Code Coverage**: >90% coverage across all source files
+- **CI/CD Pipeline**: Automated testing via GitHub Actions (.github/workflows/ci.yml)
+  - Runs all tests on every push and pull request
+  - Validates build across multiple configurations
 - **Test-Driven Development**: All features implemented with tests-first approach
-- **Continuous Testing**: All tests pass after each implementation phase
