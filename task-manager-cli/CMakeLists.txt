@@ -6,6 +6,15 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# Coverage flags (optional, enabled with -DCOVERAGE=ON)
+option(COVERAGE "Enable code coverage" OFF)
+if(COVERAGE)
+    if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage -fprofile-arcs -ftest-coverage")
+        set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
+    endif()
+endif()
+
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/src)
@@ -41,6 +50,7 @@ add_executable(task-manager-tests
     tests/test_task_repository.cpp
     tests/test_task_manager.cpp
     tests/test_cli.cpp
+    tests/test_integration.cpp
     ${SOURCES}
 )
 

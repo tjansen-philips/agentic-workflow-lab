@@ -42,9 +42,14 @@
 
 # Build directories
 obj/
+build/
+**/build/
 
 # Task data file
 tasks.txt
+tasks.json
+*.json
 
 # Binary
 task-manager
+task-manager-tests

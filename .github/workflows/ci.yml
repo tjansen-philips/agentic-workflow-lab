@@ -1,0 +1,123 @@
+name: CI - Build and Test
+
+on:
+  push:
+    branches: [ main, feature/*, copilot/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    name: Build and Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up build environment (Ubuntu)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++ gcov lcov
+        
+    - name: Set up build environment (macOS)
+      if: runner.os == 'macOS'
+      run: |
+        brew install cmake
+        
+    - name: Set up build environment (Windows)
+      if: runner.os == 'Windows'
+      uses: ilammy/msvc-dev-cmd@v1
+      
+    - name: Configure CMake
+      working-directory: task-manager-cli
+      run: |
+        mkdir -p build
+        cd build
+        cmake ..
+        
+    - name: Build
+      working-directory: task-manager-cli/build
+      run: cmake --build . --config Debug
+      
+    - name: Run Unit Tests
+      working-directory: task-manager-cli/build
+      run: ctest -C Debug --output-on-failure
+      
+    - name: Test Summary
+      if: always()
+      working-directory: task-manager-cli/build
+      run: ctest -C Debug --output-on-failure --verbose
+      
+  coverage:
+    name: Code Coverage
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake g++ gcov lcov
+        
+    - name: Configure CMake with Coverage
+      working-directory: task-manager-cli
+      run: |
+        mkdir -p build
+        cd build
+        cmake -DCOVERAGE=ON ..
+        
+    - name: Build with Coverage
+      working-directory: task-manager-cli/build
+      run: cmake --build .
+      
+    - name: Run Tests
+      working-directory: task-manager-cli/build
+      run: ./task-manager-tests
+      
+    - name: Generate Coverage Report
+      working-directory: task-manager-cli/build
+      run: |
+        echo "=== Code Coverage Report ==="
+        for file in task.cpp task_repository.cpp task_manager.cpp cli.cpp; do
+          echo "Coverage for $file:"
+          gcov CMakeFiles/task-manager-tests.dir/src/$file.gcda 2>&1 | grep -A 1 "task-manager-cli/src/$file" || true
+        done
+        
+    - name: Calculate Overall Coverage
+      working-directory: task-manager-cli/build
+      run: |
+        TOTAL_LINES=0
+        EXECUTED_LINES=0
+        for file in CMakeFiles/task-manager-tests.dir/src/*.cpp.gcda; do
+          if [ -f "$file" ]; then
+            COVERAGE=$(gcov "$file" 2>&1 | grep "task-manager-cli/src/" | grep "Lines executed" || true)
+            if [ ! -z "$COVERAGE" ]; then
+              echo "$COVERAGE"
+              PERCENT=$(echo "$COVERAGE" | grep -oP '\d+\.\d+(?=%)' || echo "0")
+              LINES=$(echo "$COVERAGE" | grep -oP '\d+ of \d+' | awk '{print $3}')
+              if [ ! -z "$LINES" ]; then
+                TOTAL_LINES=$((TOTAL_LINES + LINES))
+                EXEC=$(echo "$COVERAGE" | grep -oP '\d+ of \d+' | awk '{print $1}')
+                EXECUTED_LINES=$((EXECUTED_LINES + EXEC))
+              fi
+            fi
+          fi
+        done
+        if [ $TOTAL_LINES -gt 0 ]; then
+          OVERALL=$(awk "BEGIN {printf \"%.2f\", ($EXECUTED_LINES / $TOTAL_LINES) * 100}")
+          echo "Overall Coverage: $OVERALL% ($EXECUTED_LINES/$TOTAL_LINES lines)"
+          if (( $(echo "$OVERALL < 90" | bc -l) )); then
+            echo "::warning::Code coverage is below 90% target: $OVERALL%"
+          else
+            echo "✅ Code coverage meets >90% target: $OVERALL%"
+          fi
+        fi
