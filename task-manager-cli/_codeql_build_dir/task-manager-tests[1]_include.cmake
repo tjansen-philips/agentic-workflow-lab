@@ -1,0 +1,5 @@
+if(EXISTS "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/_codeql_build_dir/task-manager-tests[1]_tests.cmake")
+  include("/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/_codeql_build_dir/task-manager-tests[1]_tests.cmake")
+else()
+  add_test(task-manager-tests_NOT_BUILT task-manager-tests_NOT_BUILT)
+endif()

@@ -6,10 +6,16 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
   build-and-test:
     name: Build and Test on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    
+    permissions:
+      contents: read
     
     strategy:
       fail-fast: false
@@ -58,6 +64,9 @@ jobs:
   coverage:
     name: Code Coverage
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
     
     steps:
     - name: Checkout code
