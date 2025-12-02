@@ -1,8 +1,8 @@
 # CMake generated Testfile for 
-# Source directory: D:/git/agentic-workflow-lab/task-manager-cli
-# Build directory: D:/git/agentic-workflow-lab/task-manager-cli/build
+# Source directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli
+# Build directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-include("D:/git/agentic-workflow-lab/task-manager-cli/build/task-manager-tests[1]_include.cmake")
+include("/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests[1]_include.cmake")
 subdirs("_deps/googletest-build")

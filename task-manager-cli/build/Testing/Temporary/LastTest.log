@@ -1,13 +1,13 @@
-Start testing: Dec 02 15:42 W. Europe Standard Time
+Start testing: Dec 02 15:03 UTC
 ----------------------------------------------------------
 1/41 Testing: TaskTest.CreateTask
 1/41 Test: TaskTest.CreateTask
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskTest.CreateTask" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskTest.CreateTask" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskTest.CreateTask" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskTest.CreateTask" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskTest.CreateTask
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -20,21 +20,21 @@ Note: Google Test filter = TaskTest.CreateTask
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskTest.CreateTask" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskTest.CreateTask" end time: Dec 02 15:03 UTC
 "TaskTest.CreateTask" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/41 Testing: TaskTest.CreateCompletedTask
 2/41 Test: TaskTest.CreateCompletedTask
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskTest.CreateCompletedTask" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskTest.CreateCompletedTask" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskTest.CreateCompletedTask" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskTest.CreateCompletedTask" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskTest.CreateCompletedTask
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -47,21 +47,21 @@ Note: Google Test filter = TaskTest.CreateCompletedTask
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskTest.CreateCompletedTask" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskTest.CreateCompletedTask" end time: Dec 02 15:03 UTC
 "TaskTest.CreateCompletedTask" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/41 Testing: TaskTest.SetCompleted
 3/41 Test: TaskTest.SetCompleted
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskTest.SetCompleted" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskTest.SetCompleted" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskTest.SetCompleted" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskTest.SetCompleted" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskTest.SetCompleted
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -74,21 +74,21 @@ Note: Google Test filter = TaskTest.SetCompleted
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskTest.SetCompleted" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskTest.SetCompleted" end time: Dec 02 15:03 UTC
 "TaskTest.SetCompleted" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/41 Testing: TaskTest.ToJson
 4/41 Test: TaskTest.ToJson
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskTest.ToJson" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskTest.ToJson" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskTest.ToJson" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskTest.ToJson" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskTest.ToJson
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -101,21 +101,21 @@ Note: Google Test filter = TaskTest.ToJson
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskTest.ToJson" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskTest.ToJson" end time: Dec 02 15:03 UTC
 "TaskTest.ToJson" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 5/41 Testing: TaskTest.FromJson
 5/41 Test: TaskTest.FromJson
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskTest.FromJson" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskTest.FromJson" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskTest.FromJson" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskTest.FromJson" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskTest.FromJson
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -128,21 +128,21 @@ Note: Google Test filter = TaskTest.FromJson
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskTest.FromJson" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskTest.FromJson" end time: Dec 02 15:03 UTC
 "TaskTest.FromJson" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 6/41 Testing: TaskTest.JsonRoundTrip
 6/41 Test: TaskTest.JsonRoundTrip
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskTest.JsonRoundTrip" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskTest.JsonRoundTrip" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskTest.JsonRoundTrip" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskTest.JsonRoundTrip" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskTest.JsonRoundTrip
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -155,21 +155,21 @@ Note: Google Test filter = TaskTest.JsonRoundTrip
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskTest.JsonRoundTrip" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskTest.JsonRoundTrip" end time: Dec 02 15:03 UTC
 "TaskTest.JsonRoundTrip" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 7/41 Testing: TaskRepositoryTest.LoadFromNonExistentFile
 7/41 Test: TaskRepositoryTest.LoadFromNonExistentFile
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.LoadFromNonExistentFile" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.LoadFromNonExistentFile" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.LoadFromNonExistentFile" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.LoadFromNonExistentFile" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.LoadFromNonExistentFile
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -179,78 +179,78 @@ Note: Google Test filter = TaskRepositoryTest.LoadFromNonExistentFile
 [----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.LoadFromNonExistentFile" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.LoadFromNonExistentFile" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.LoadFromNonExistentFile" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 8/41 Testing: TaskRepositoryTest.SaveAndLoadTasks
 8/41 Test: TaskRepositoryTest.SaveAndLoadTasks
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.SaveAndLoadTasks" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.SaveAndLoadTasks" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.SaveAndLoadTasks" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.SaveAndLoadTasks" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.SaveAndLoadTasks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskRepositoryTest
 [ RUN      ] TaskRepositoryTest.SaveAndLoadTasks
-[       OK ] TaskRepositoryTest.SaveAndLoadTasks (1 ms)
-[----------] 1 test from TaskRepositoryTest (1 ms total)
+[       OK ] TaskRepositoryTest.SaveAndLoadTasks (0 ms)
+[----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.SaveAndLoadTasks" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.SaveAndLoadTasks" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.SaveAndLoadTasks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 9/41 Testing: TaskRepositoryTest.LoadFromExistingFile
 9/41 Test: TaskRepositoryTest.LoadFromExistingFile
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.LoadFromExistingFile" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.LoadFromExistingFile" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.LoadFromExistingFile" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.LoadFromExistingFile" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.LoadFromExistingFile
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskRepositoryTest
 [ RUN      ] TaskRepositoryTest.LoadFromExistingFile
-[       OK ] TaskRepositoryTest.LoadFromExistingFile (1 ms)
-[----------] 1 test from TaskRepositoryTest (1 ms total)
+[       OK ] TaskRepositoryTest.LoadFromExistingFile (0 ms)
+[----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.LoadFromExistingFile" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.LoadFromExistingFile" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.LoadFromExistingFile" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 10/41 Testing: TaskRepositoryTest.GetNextIdEmpty
 10/41 Test: TaskRepositoryTest.GetNextIdEmpty
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.GetNextIdEmpty" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.GetNextIdEmpty" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.GetNextIdEmpty" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.GetNextIdEmpty" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.GetNextIdEmpty
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -263,129 +263,129 @@ Note: Google Test filter = TaskRepositoryTest.GetNextIdEmpty
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.GetNextIdEmpty" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.GetNextIdEmpty" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.GetNextIdEmpty" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 11/41 Testing: TaskRepositoryTest.GetNextIdWithExistingTasks
 11/41 Test: TaskRepositoryTest.GetNextIdWithExistingTasks
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.GetNextIdWithExistingTasks" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.GetNextIdWithExistingTasks" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.GetNextIdWithExistingTasks" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.GetNextIdWithExistingTasks" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.GetNextIdWithExistingTasks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskRepositoryTest
 [ RUN      ] TaskRepositoryTest.GetNextIdWithExistingTasks
-[       OK ] TaskRepositoryTest.GetNextIdWithExistingTasks (1 ms)
-[----------] 1 test from TaskRepositoryTest (1 ms total)
+[       OK ] TaskRepositoryTest.GetNextIdWithExistingTasks (0 ms)
+[----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.GetNextIdWithExistingTasks" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.GetNextIdWithExistingTasks" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.GetNextIdWithExistingTasks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 12/41 Testing: TaskRepositoryTest.SaveEmptyList
 12/41 Test: TaskRepositoryTest.SaveEmptyList
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.SaveEmptyList" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.SaveEmptyList" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.SaveEmptyList" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.SaveEmptyList" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.SaveEmptyList
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskRepositoryTest
 [ RUN      ] TaskRepositoryTest.SaveEmptyList
-[       OK ] TaskRepositoryTest.SaveEmptyList (1 ms)
-[----------] 1 test from TaskRepositoryTest (1 ms total)
+[       OK ] TaskRepositoryTest.SaveEmptyList (0 ms)
+[----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.SaveEmptyList" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.SaveEmptyList" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.SaveEmptyList" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 13/41 Testing: TaskRepositoryTest.MultipleSaveLoadCycles
 13/41 Test: TaskRepositoryTest.MultipleSaveLoadCycles
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.MultipleSaveLoadCycles" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.MultipleSaveLoadCycles" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.MultipleSaveLoadCycles" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.MultipleSaveLoadCycles" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.MultipleSaveLoadCycles
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskRepositoryTest
 [ RUN      ] TaskRepositoryTest.MultipleSaveLoadCycles
-[       OK ] TaskRepositoryTest.MultipleSaveLoadCycles (1 ms)
-[----------] 1 test from TaskRepositoryTest (1 ms total)
+[       OK ] TaskRepositoryTest.MultipleSaveLoadCycles (0 ms)
+[----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.MultipleSaveLoadCycles" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.MultipleSaveLoadCycles" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.MultipleSaveLoadCycles" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 14/41 Testing: TaskRepositoryTest.ResetIdCounter
 14/41 Test: TaskRepositoryTest.ResetIdCounter
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.ResetIdCounter" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.ResetIdCounter" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.ResetIdCounter" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.ResetIdCounter" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.ResetIdCounter
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskRepositoryTest
 [ RUN      ] TaskRepositoryTest.ResetIdCounter
-[       OK ] TaskRepositoryTest.ResetIdCounter (1 ms)
-[----------] 1 test from TaskRepositoryTest (1 ms total)
+[       OK ] TaskRepositoryTest.ResetIdCounter (0 ms)
+[----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.ResetIdCounter" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.ResetIdCounter" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.ResetIdCounter" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 15/41 Testing: TaskRepositoryTest.ResetIdCounterOnEmpty
 15/41 Test: TaskRepositoryTest.ResetIdCounterOnEmpty
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskRepositoryTest.ResetIdCounterOnEmpty" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskRepositoryTest.ResetIdCounterOnEmpty" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskRepositoryTest.ResetIdCounterOnEmpty" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskRepositoryTest.ResetIdCounterOnEmpty" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskRepositoryTest.ResetIdCounterOnEmpty
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -395,159 +395,159 @@ Note: Google Test filter = TaskRepositoryTest.ResetIdCounterOnEmpty
 [----------] 1 test from TaskRepositoryTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskRepositoryTest.ResetIdCounterOnEmpty" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskRepositoryTest.ResetIdCounterOnEmpty" end time: Dec 02 15:03 UTC
 "TaskRepositoryTest.ResetIdCounterOnEmpty" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 16/41 Testing: TaskManagerTest.AddTask
 16/41 Test: TaskManagerTest.AddTask
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.AddTask" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.AddTask" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.AddTask" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.AddTask" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.AddTask
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.AddTask
-[       OK ] TaskManagerTest.AddTask (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.AddTask (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.AddTask" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.AddTask" end time: Dec 02 15:03 UTC
 "TaskManagerTest.AddTask" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 17/41 Testing: TaskManagerTest.AddMultipleTasks
 17/41 Test: TaskManagerTest.AddMultipleTasks
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.AddMultipleTasks" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.AddMultipleTasks" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.AddMultipleTasks" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.AddMultipleTasks" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.AddMultipleTasks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.AddMultipleTasks
-[       OK ] TaskManagerTest.AddMultipleTasks (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.AddMultipleTasks (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.AddMultipleTasks" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.AddMultipleTasks" end time: Dec 02 15:03 UTC
 "TaskManagerTest.AddMultipleTasks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 18/41 Testing: TaskManagerTest.AddTaskEmptyDescription
 18/41 Test: TaskManagerTest.AddTaskEmptyDescription
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.AddTaskEmptyDescription" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.AddTaskEmptyDescription" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.AddTaskEmptyDescription" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.AddTaskEmptyDescription" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.AddTaskEmptyDescription
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.AddTaskEmptyDescription
-[       OK ] TaskManagerTest.AddTaskEmptyDescription (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.AddTaskEmptyDescription (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.AddTaskEmptyDescription" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.AddTaskEmptyDescription" end time: Dec 02 15:03 UTC
 "TaskManagerTest.AddTaskEmptyDescription" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 19/41 Testing: TaskManagerTest.ListTasksEmpty
 19/41 Test: TaskManagerTest.ListTasksEmpty
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.ListTasksEmpty" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.ListTasksEmpty" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.ListTasksEmpty" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.ListTasksEmpty" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.ListTasksEmpty
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.ListTasksEmpty
-[       OK ] TaskManagerTest.ListTasksEmpty (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.ListTasksEmpty (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.ListTasksEmpty" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.ListTasksEmpty" end time: Dec 02 15:03 UTC
 "TaskManagerTest.ListTasksEmpty" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 20/41 Testing: TaskManagerTest.CompleteTask
 20/41 Test: TaskManagerTest.CompleteTask
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.CompleteTask" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.CompleteTask" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.CompleteTask" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.CompleteTask" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.CompleteTask
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.CompleteTask
-[       OK ] TaskManagerTest.CompleteTask (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.CompleteTask (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.CompleteTask" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.CompleteTask" end time: Dec 02 15:03 UTC
 "TaskManagerTest.CompleteTask" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 21/41 Testing: TaskManagerTest.CompleteNonExistentTask
 21/41 Test: TaskManagerTest.CompleteNonExistentTask
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.CompleteNonExistentTask" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.CompleteNonExistentTask" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.CompleteNonExistentTask" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.CompleteNonExistentTask" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.CompleteNonExistentTask
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -557,213 +557,213 @@ Note: Google Test filter = TaskManagerTest.CompleteNonExistentTask
 [----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.CompleteNonExistentTask" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.CompleteNonExistentTask" end time: Dec 02 15:03 UTC
 "TaskManagerTest.CompleteNonExistentTask" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 22/41 Testing: TaskManagerTest.CompleteSpecificTask
 22/41 Test: TaskManagerTest.CompleteSpecificTask
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.CompleteSpecificTask" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.CompleteSpecificTask" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.CompleteSpecificTask" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.CompleteSpecificTask" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.CompleteSpecificTask
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.CompleteSpecificTask
-[       OK ] TaskManagerTest.CompleteSpecificTask (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.CompleteSpecificTask (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.CompleteSpecificTask" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.CompleteSpecificTask" end time: Dec 02 15:03 UTC
 "TaskManagerTest.CompleteSpecificTask" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 23/41 Testing: TaskManagerTest.PersistenceAcrossRestarts
 23/41 Test: TaskManagerTest.PersistenceAcrossRestarts
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.PersistenceAcrossRestarts" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.PersistenceAcrossRestarts" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.PersistenceAcrossRestarts" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.PersistenceAcrossRestarts" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.PersistenceAcrossRestarts
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.PersistenceAcrossRestarts
-[       OK ] TaskManagerTest.PersistenceAcrossRestarts (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.PersistenceAcrossRestarts (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.PersistenceAcrossRestarts" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.PersistenceAcrossRestarts" end time: Dec 02 15:03 UTC
 "TaskManagerTest.PersistenceAcrossRestarts" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 24/41 Testing: TaskManagerTest.IdContinuityAfterRestart
 24/41 Test: TaskManagerTest.IdContinuityAfterRestart
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.IdContinuityAfterRestart" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.IdContinuityAfterRestart" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.IdContinuityAfterRestart" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.IdContinuityAfterRestart" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.IdContinuityAfterRestart
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.IdContinuityAfterRestart
-[       OK ] TaskManagerTest.IdContinuityAfterRestart (2 ms)
-[----------] 1 test from TaskManagerTest (2 ms total)
+[       OK ] TaskManagerTest.IdContinuityAfterRestart (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (2 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.IdContinuityAfterRestart" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.IdContinuityAfterRestart" end time: Dec 02 15:03 UTC
 "TaskManagerTest.IdContinuityAfterRestart" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 25/41 Testing: TaskManagerTest.ClearAllTasks
 25/41 Test: TaskManagerTest.ClearAllTasks
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.ClearAllTasks" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.ClearAllTasks" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.ClearAllTasks" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.ClearAllTasks" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.ClearAllTasks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.ClearAllTasks
-[       OK ] TaskManagerTest.ClearAllTasks (1 ms)
-[----------] 1 test from TaskManagerTest (1 ms total)
+[       OK ] TaskManagerTest.ClearAllTasks (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.ClearAllTasks" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.ClearAllTasks" end time: Dec 02 15:03 UTC
 "TaskManagerTest.ClearAllTasks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 26/41 Testing: TaskManagerTest.ClearEmptyList
 26/41 Test: TaskManagerTest.ClearEmptyList
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.ClearEmptyList" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.ClearEmptyList" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.ClearEmptyList" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.ClearEmptyList" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.ClearEmptyList
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.ClearEmptyList
-[       OK ] TaskManagerTest.ClearEmptyList (1 ms)
+[       OK ] TaskManagerTest.ClearEmptyList (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TaskManagerTest.ClearEmptyList" end time: Dec 02 15:03 UTC
+"TaskManagerTest.ClearEmptyList" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/41 Testing: TaskManagerTest.IdResetAfterClear
+27/41 Test: TaskManagerTest.IdResetAfterClear
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.IdResetAfterClear" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.IdResetAfterClear" start time: Dec 02 15:03 UTC
+Output:
+----------------------------------------------------------
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TaskManagerTest.IdResetAfterClear
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TaskManagerTest
+[ RUN      ] TaskManagerTest.IdResetAfterClear
+[       OK ] TaskManagerTest.IdResetAfterClear (1 ms)
 [----------] 1 test from TaskManagerTest (1 ms total)
 
 [----------] Global test environment tear-down
 [==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.ClearEmptyList" end time: Dec 02 15:42 W. Europe Standard Time
-"TaskManagerTest.ClearEmptyList" time elapsed: 00:00:00
-----------------------------------------------------------
-
-27/41 Testing: TaskManagerTest.IdResetAfterClear
-27/41 Test: TaskManagerTest.IdResetAfterClear
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.IdResetAfterClear" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.IdResetAfterClear" start time: Dec 02 15:42 W. Europe Standard Time
-Output:
-----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
-Note: Google Test filter = TaskManagerTest.IdResetAfterClear
-[==========] Running 1 test from 1 test suite.
-[----------] Global test environment set-up.
-[----------] 1 test from TaskManagerTest
-[ RUN      ] TaskManagerTest.IdResetAfterClear
-[       OK ] TaskManagerTest.IdResetAfterClear (2 ms)
-[----------] 1 test from TaskManagerTest (2 ms total)
-
-[----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (2 ms total)
-[  PASSED  ] 1 test.
-<end of output>
-Test time =   0.03 sec
-----------------------------------------------------------
-Test Passed.
-"TaskManagerTest.IdResetAfterClear" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.IdResetAfterClear" end time: Dec 02 15:03 UTC
 "TaskManagerTest.IdResetAfterClear" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 28/41 Testing: TaskManagerTest.ClearPersistence
 28/41 Test: TaskManagerTest.ClearPersistence
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=TaskManagerTest.ClearPersistence" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"TaskManagerTest.ClearPersistence" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=TaskManagerTest.ClearPersistence" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"TaskManagerTest.ClearPersistence" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = TaskManagerTest.ClearPersistence
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from TaskManagerTest
 [ RUN      ] TaskManagerTest.ClearPersistence
-[       OK ] TaskManagerTest.ClearPersistence (2 ms)
-[----------] 1 test from TaskManagerTest (2 ms total)
+[       OK ] TaskManagerTest.ClearPersistence (0 ms)
+[----------] 1 test from TaskManagerTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (2 ms total)
+[==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TaskManagerTest.ClearPersistence" end time: Dec 02 15:42 W. Europe Standard Time
+"TaskManagerTest.ClearPersistence" end time: Dec 02 15:03 UTC
 "TaskManagerTest.ClearPersistence" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 29/41 Testing: CLITest.ParseAddCommandWithQuotes
 29/41 Test: CLITest.ParseAddCommandWithQuotes
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseAddCommandWithQuotes" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseAddCommandWithQuotes" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseAddCommandWithQuotes" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseAddCommandWithQuotes" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseAddCommandWithQuotes
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -776,21 +776,21 @@ Note: Google Test filter = CLITest.ParseAddCommandWithQuotes
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseAddCommandWithQuotes" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseAddCommandWithQuotes" end time: Dec 02 15:03 UTC
 "CLITest.ParseAddCommandWithQuotes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 30/41 Testing: CLITest.ParseAddCommandMultipleWords
 30/41 Test: CLITest.ParseAddCommandMultipleWords
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseAddCommandMultipleWords" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseAddCommandMultipleWords" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseAddCommandMultipleWords" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseAddCommandMultipleWords" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseAddCommandMultipleWords
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -803,21 +803,21 @@ Note: Google Test filter = CLITest.ParseAddCommandMultipleWords
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseAddCommandMultipleWords" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseAddCommandMultipleWords" end time: Dec 02 15:03 UTC
 "CLITest.ParseAddCommandMultipleWords" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 31/41 Testing: CLITest.ParseListCommand
 31/41 Test: CLITest.ParseListCommand
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseListCommand" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseListCommand" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseListCommand" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseListCommand" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseListCommand
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -830,21 +830,21 @@ Note: Google Test filter = CLITest.ParseListCommand
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseListCommand" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseListCommand" end time: Dec 02 15:03 UTC
 "CLITest.ParseListCommand" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 32/41 Testing: CLITest.ParseCompleteCommand
 32/41 Test: CLITest.ParseCompleteCommand
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseCompleteCommand" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseCompleteCommand" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseCompleteCommand" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseCompleteCommand" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseCompleteCommand
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -857,21 +857,21 @@ Note: Google Test filter = CLITest.ParseCompleteCommand
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseCompleteCommand" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseCompleteCommand" end time: Dec 02 15:03 UTC
 "CLITest.ParseCompleteCommand" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 33/41 Testing: CLITest.ParseHelpCommand
 33/41 Test: CLITest.ParseHelpCommand
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseHelpCommand" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseHelpCommand" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseHelpCommand" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseHelpCommand" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseHelpCommand
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -884,21 +884,21 @@ Note: Google Test filter = CLITest.ParseHelpCommand
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseHelpCommand" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseHelpCommand" end time: Dec 02 15:03 UTC
 "CLITest.ParseHelpCommand" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 34/41 Testing: CLITest.ParseClearCommand
 34/41 Test: CLITest.ParseClearCommand
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseClearCommand" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseClearCommand" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseClearCommand" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseClearCommand" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseClearCommand
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -911,21 +911,21 @@ Note: Google Test filter = CLITest.ParseClearCommand
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseClearCommand" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseClearCommand" end time: Dec 02 15:03 UTC
 "CLITest.ParseClearCommand" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 35/41 Testing: CLITest.ParseInvalidCommand
 35/41 Test: CLITest.ParseInvalidCommand
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseInvalidCommand" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseInvalidCommand" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseInvalidCommand" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseInvalidCommand" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseInvalidCommand
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -938,21 +938,21 @@ Note: Google Test filter = CLITest.ParseInvalidCommand
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseInvalidCommand" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseInvalidCommand" end time: Dec 02 15:03 UTC
 "CLITest.ParseInvalidCommand" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 36/41 Testing: CLITest.ParseNoCommand
 36/41 Test: CLITest.ParseNoCommand
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.ParseNoCommand" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.ParseNoCommand" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.ParseNoCommand" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.ParseNoCommand" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.ParseNoCommand
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -965,21 +965,21 @@ Note: Google Test filter = CLITest.ParseNoCommand
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.ParseNoCommand" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.ParseNoCommand" end time: Dec 02 15:03 UTC
 "CLITest.ParseNoCommand" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 37/41 Testing: CLITest.DisplayHelp
 37/41 Test: CLITest.DisplayHelp
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.DisplayHelp" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.DisplayHelp" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.DisplayHelp" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.DisplayHelp" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.DisplayHelp
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -992,21 +992,21 @@ Note: Google Test filter = CLITest.DisplayHelp
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.DisplayHelp" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.DisplayHelp" end time: Dec 02 15:03 UTC
 "CLITest.DisplayHelp" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 38/41 Testing: CLITest.DisplayTasks
 38/41 Test: CLITest.DisplayTasks
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.DisplayTasks" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.DisplayTasks" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.DisplayTasks" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.DisplayTasks" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.DisplayTasks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -1019,21 +1019,21 @@ Note: Google Test filter = CLITest.DisplayTasks
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.DisplayTasks" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.DisplayTasks" end time: Dec 02 15:03 UTC
 "CLITest.DisplayTasks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 39/41 Testing: CLITest.DisplayEmptyTasks
 39/41 Test: CLITest.DisplayEmptyTasks
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.DisplayEmptyTasks" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.DisplayEmptyTasks" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.DisplayEmptyTasks" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.DisplayEmptyTasks" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.DisplayEmptyTasks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -1046,21 +1046,21 @@ Note: Google Test filter = CLITest.DisplayEmptyTasks
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.DisplayEmptyTasks" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.DisplayEmptyTasks" end time: Dec 02 15:03 UTC
 "CLITest.DisplayEmptyTasks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 40/41 Testing: CLITest.DisplaySuccess
 40/41 Test: CLITest.DisplaySuccess
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.DisplaySuccess" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.DisplaySuccess" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.DisplaySuccess" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.DisplaySuccess" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.DisplaySuccess
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -1073,21 +1073,21 @@ Note: Google Test filter = CLITest.DisplaySuccess
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.DisplaySuccess" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.DisplaySuccess" end time: Dec 02 15:03 UTC
 "CLITest.DisplaySuccess" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 41/41 Testing: CLITest.DisplayError
 41/41 Test: CLITest.DisplayError
-Command: "D:/git/agentic-workflow-lab/task-manager-cli/build/Debug/task-manager-tests.exe" "--gtest_filter=CLITest.DisplayError" "--gtest_also_run_disabled_tests"
-Directory: D:/git/agentic-workflow-lab/task-manager-cli/build
-"CLITest.DisplayError" start time: Dec 02 15:42 W. Europe Standard Time
+Command: "/home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/task-manager-tests" "--gtest_filter=CLITest.DisplayError" "--gtest_also_run_disabled_tests"
+Directory: /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build
+"CLITest.DisplayError" start time: Dec 02 15:03 UTC
 Output:
 ----------------------------------------------------------
-Running main() from D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Running main() from /home/runner/work/agentic-workflow-lab/agentic-workflow-lab/task-manager-cli/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CLITest.DisplayError
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -1100,11 +1100,11 @@ Note: Google Test filter = CLITest.DisplayError
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.03 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CLITest.DisplayError" end time: Dec 02 15:42 W. Europe Standard Time
+"CLITest.DisplayError" end time: Dec 02 15:03 UTC
 "CLITest.DisplayError" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Dec 02 15:42 W. Europe Standard Time
+End testing: Dec 02 15:03 UTC

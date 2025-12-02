@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/task-manager.dir/link.d "CMakeFiles/task-manager.dir/src/main.cpp.o" "CMakeFiles/task-manager.dir/src/task.cpp.o" "CMakeFiles/task-manager.dir/src/task_repository.cpp.o" "CMakeFiles/task-manager.dir/src/task_manager.cpp.o" "CMakeFiles/task-manager.dir/src/cli.cpp.o" -o task-manager
