@@ -1,0 +1,10 @@
+^D:\GIT\AGENTIC-WORKFLOW-LAB\TASK-MANAGER-CLI\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/git/agentic-workflow-lab/task-manager-cli -BD:/git/agentic-workflow-lab/task-manager-cli/build --check-stamp-file D:/git/agentic-workflow-lab/task-manager-cli/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

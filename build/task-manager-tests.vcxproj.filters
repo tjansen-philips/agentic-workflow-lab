@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\tests\test_task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\tests\test_task_repository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\tests\test_task_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\tests\test_cli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\src\task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\src\task_repository.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\src\task_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\git\agentic-workflow-lab\task-manager-cli\src\cli.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C5AA03D6-69BD-3CA4-A628-74B2EF145C46}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

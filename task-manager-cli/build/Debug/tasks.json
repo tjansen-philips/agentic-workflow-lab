@@ -1,0 +1,17 @@
+[
+  {
+    "completed": true,
+    "description": "Buy groceries",
+    "id": 1
+  },
+  {
+    "completed": false,
+    "description": "Write code",
+    "id": 2
+  },
+  {
+    "completed": false,
+    "description": "Review PR",
+    "id": 3
+  }
+]

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\458e3076a828a6570372ca2c6728d5f7\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EE7F8214-CC68-347A-9E64-E857DA405B44}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

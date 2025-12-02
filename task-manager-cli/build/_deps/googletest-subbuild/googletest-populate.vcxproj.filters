@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d06a980f14d9ec8b0aa1f3a54684e641\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\02323af93a78861c8ea9c95bf99400be\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\d7df365346f04ce76ed113584cf5c61e\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\git\agentic-workflow-lab\task-manager-cli\build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A786129C-E16A-3499-8C91-1A9061480490}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
