@@ -38,6 +38,9 @@ Command CLI::parseCommand(int argc, char* argv[]) {
         cmd.type = CommandType::COMPLETE;
         cmd.argument = argv[2];
     }
+    else if (command == "clear") {
+        cmd.type = CommandType::CLEAR;
+    }
     else if (command == "--help" || command == "-h") {
         cmd.type = CommandType::HELP;
     }
@@ -54,11 +57,13 @@ void CLI::displayHelp(std::ostream& out) {
     out << "  task-manager add <description>    Add a new task\n";
     out << "  task-manager list                  List all tasks\n";
     out << "  task-manager complete <id>         Mark a task as completed\n";
+    out << "  task-manager clear                 Clear all tasks\n";
     out << "  task-manager --help                Show this help message\n\n";
     out << "Examples:\n";
     out << "  task-manager add Buy groceries\n";
     out << "  task-manager list\n";
     out << "  task-manager complete 1\n";
+    out << "  task-manager clear\n";
 }
 
 void CLI::displayTasks(const std::vector<Task>& tasks, std::ostream& out) {

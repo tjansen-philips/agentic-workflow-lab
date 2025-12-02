@@ -10,6 +10,7 @@ enum class CommandType {
     ADD,
     LIST,
     COMPLETE,
+    CLEAR,
     HELP,
     INVALID
 };

@@ -74,3 +74,7 @@ void TaskRepository::saveTasks(const std::vector<Task>& tasks) {
 int TaskRepository::getNextId() const {
     return maxId + 1;
 }
+
+void TaskRepository::resetIdCounter() {
+    maxId = 0;
+}

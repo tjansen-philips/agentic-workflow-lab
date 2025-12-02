@@ -143,3 +143,33 @@ TEST_F(TaskRepositoryTest, MultipleSaveLoadCycles) {
     EXPECT_TRUE(loaded[0].isCompleted()); // Should reflect the update
     EXPECT_EQ(loaded[1].getId(), 2);
 }
+
+// Test resetting ID counter
+TEST_F(TaskRepositoryTest, ResetIdCounter) {
+    TaskRepository repo(testFilePath);
+    
+    // Add some tasks with high IDs
+    std::vector<Task> tasks = {
+        Task(5, "Task 5", false),
+        Task(10, "Task 10", false)
+    };
+    repo.saveTasks(tasks);
+    repo.loadTasks();
+    
+    EXPECT_EQ(repo.getNextId(), 11); // Before reset
+    
+    // Reset the counter
+    repo.resetIdCounter();
+    
+    EXPECT_EQ(repo.getNextId(), 1); // After reset, should be 1
+}
+
+// Test reset on empty repository
+TEST_F(TaskRepositoryTest, ResetIdCounterOnEmpty) {
+    TaskRepository repo(testFilePath);
+    repo.loadTasks(); // Empty list
+    
+    repo.resetIdCounter();
+    
+    EXPECT_EQ(repo.getNextId(), 1);
+}

@@ -161,3 +161,70 @@ TEST_F(TaskManagerTest, IdContinuityAfterRestart) {
         EXPECT_EQ(id, 3); // Should continue from previous max ID
     }
 }
+
+// Test clearing all tasks
+TEST_F(TaskManagerTest, ClearAllTasks) {
+    TaskRepository repo(testFilePath);
+    TaskManager manager(repo);
+    
+    manager.addTask("Task 1");
+    manager.addTask("Task 2");
+    manager.addTask("Task 3");
+    
+    EXPECT_EQ(manager.listTasks().size(), 3);
+    
+    manager.clearAllTasks();
+    
+    EXPECT_TRUE(manager.listTasks().empty());
+}
+
+// Test clearing empty list
+TEST_F(TaskManagerTest, ClearEmptyList) {
+    TaskRepository repo(testFilePath);
+    TaskManager manager(repo);
+    
+    EXPECT_TRUE(manager.listTasks().empty());
+    
+    manager.clearAllTasks(); // Should not throw or error
+    
+    EXPECT_TRUE(manager.listTasks().empty());
+}
+
+// Test ID reset after clear
+TEST_F(TaskManagerTest, IdResetAfterClear) {
+    TaskRepository repo(testFilePath);
+    TaskManager manager(repo);
+    
+    manager.addTask("Task 1");
+    manager.addTask("Task 2");
+    int lastId = manager.addTask("Task 3");
+    EXPECT_EQ(lastId, 3);
+    
+    manager.clearAllTasks();
+    
+    int newId = manager.addTask("New task");
+    EXPECT_EQ(newId, 1); // Should reset to 1
+}
+
+// Test clear persistence
+TEST_F(TaskManagerTest, ClearPersistence) {
+    {
+        TaskRepository repo(testFilePath);
+        TaskManager manager(repo);
+        
+        manager.addTask("Task 1");
+        manager.addTask("Task 2");
+        manager.clearAllTasks();
+    }
+    
+    // Verify clear was persisted
+    {
+        TaskRepository repo(testFilePath);
+        TaskManager manager(repo);
+        
+        EXPECT_TRUE(manager.listTasks().empty());
+        
+        int newId = manager.addTask("New task");
+        EXPECT_EQ(newId, 1); // ID should be reset
+    }
+}

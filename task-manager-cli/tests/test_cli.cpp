@@ -56,6 +56,16 @@ TEST(CLITest, ParseHelpCommand) {
     EXPECT_EQ(cmd.type, CommandType::HELP);
 }
 
+// Test parsing clear command
+TEST(CLITest, ParseClearCommand) {
+    const char* argv[] = {"task-manager", "clear"};
+    CLI cli;
+    
+    auto cmd = cli.parseCommand(2, const_cast<char**>(argv));
+    
+    EXPECT_EQ(cmd.type, CommandType::CLEAR);
+}
+
 // Test parsing invalid command
 TEST(CLITest, ParseInvalidCommand) {
     const char* argv[] = {"task-manager", "invalid"};
@@ -88,6 +98,7 @@ TEST(CLITest, DisplayHelp) {
     EXPECT_TRUE(output.find("add") != std::string::npos);
     EXPECT_TRUE(output.find("list") != std::string::npos);
     EXPECT_TRUE(output.find("complete") != std::string::npos);
+    EXPECT_TRUE(output.find("clear") != std::string::npos);
 }
 
 // Test displaying tasks

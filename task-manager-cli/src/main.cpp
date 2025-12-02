@@ -48,6 +48,12 @@ int main(int argc, char* argv[]) {
                 break;
             }
 
+            case CommandType::CLEAR: {
+                manager.clearAllTasks();
+                cli.displaySuccess("All tasks cleared");
+                break;
+            }
+
             case CommandType::HELP: {
                 cli.displayHelp();
                 break;

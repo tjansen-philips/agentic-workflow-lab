@@ -23,6 +23,9 @@ public:
 
     // Complete a task by ID
     bool completeTask(int id);
+
+    // Clear all tasks
+    void clearAllTasks();
 };
 
 #endif // TASK_MANAGER_H

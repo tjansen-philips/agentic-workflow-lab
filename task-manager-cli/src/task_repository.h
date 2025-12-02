@@ -22,6 +22,9 @@ public:
 
     // Get next available ID
     int getNextId() const;
+
+    // Reset ID counter to 0 (next ID will be 1)
+    void resetIdCounter();
 };
 
 #endif // TASK_REPOSITORY_H

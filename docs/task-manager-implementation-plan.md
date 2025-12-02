@@ -1,12 +1,12 @@
 ---
 title: Task Manager CLI Implementation Plan
-version: 1.0
+version: 2.0
 date_created: 2025-12-02
 last_updated: 2025-12-02
 ---
 # Implementation Plan: Task Manager CLI (C++)
 
-Create a minimal Task Manager CLI application in C++ for demo purposes. The application will support three core operations: adding tasks, listing tasks, and marking tasks as complete. Data will be persisted to a JSON file in the executable directory. The implementation follows a layered architecture with clear separation between presentation (CLI), business logic (task management), and data persistence.
+Create a minimal Task Manager CLI application in C++ for demo purposes. The application supports four core operations: adding tasks, listing tasks, marking tasks as complete, and clearing all tasks. Data is persisted to a JSON file in the executable directory. The implementation follows a layered architecture with clear separation between presentation (CLI), business logic (task management), and data persistence.
 
 ## Architecture and design
 
@@ -18,9 +18,10 @@ The application follows a **layered architecture pattern**:
    - Parses command-line arguments
    - Displays output to console with help text on errors
    - Handles user input/output formatting
+   - Supports commands: add, list, complete, clear, --help
 
 2. **Business Logic Layer** (`task_manager.h/cpp`, `task.h/cpp`)
-   - Manages task operations (add, list, complete)
+   - Manages task operations (add, list, complete, clear)
    - Enforces business rules
    - Coordinates between CLI and repository
 
@@ -28,6 +29,7 @@ The application follows a **layered architecture pattern**:
    - Handles file I/O operations
    - Serializes/deserializes tasks to/from JSON
    - Abstracts persistence details using repository pattern
+   - Manages ID counter with reset capability
 
 ### Data Model
 
@@ -124,13 +126,27 @@ The application follows a **layered architecture pattern**:
 
 ## Implementation Status
 
-**✅ ALL TASKS COMPLETED**
+**✅ ALL TASKS COMPLETED (Including Clear Feature)**
 
-- Total tests: 34
-- Pass rate: 100%
+### Initial Implementation (v1.0)
+- Core features: add, list, complete
+- Tests: 34 (100% pass rate)
 - Build system: CMake with Google Test integration
 - Documentation: Complete with usage examples
+
+### Clear Feature Addition (v2.0)
+- New command: `clear` - removes all tasks and resets ID counter
+- Additional tests: 7 new tests
+- **Total tests: 41 (100% pass rate)**
+- Updated documentation across all files
 - Test-driven development: All components implemented following TDD principles
+
+### Feature Summary
+1. ✅ `add` - Create tasks with descriptions
+2. ✅ `list` - Display all tasks with completion status
+3. ✅ `complete` - Mark tasks as done by ID
+4. ✅ `clear` - Remove all tasks and reset ID counter to 1
+5. ✅ `--help` - Display usage information
 
 ## Open questions
 
@@ -139,3 +155,6 @@ The application follows a **layered architecture pattern**:
 1. ✅ **Error Handling Strategy**: Display help text when commands are malformed or invalid
 2. ✅ **Task ID Display**: Show original IDs (preserves gaps, consistent with complete command)
 3. ✅ **JSON File Location**: Store in executable directory using `std::filesystem`
+4. ✅ **Clear Behavior**: Delete all tasks permanently
+5. ✅ **ID Reset After Clear**: Reset to ID 1 (maxId becomes 0)
+6. ✅ **Empty List Clear**: Silently succeed with success message

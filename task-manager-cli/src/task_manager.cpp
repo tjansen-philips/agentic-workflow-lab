@@ -40,3 +40,14 @@ bool TaskManager::completeTask(int id) {
     // Task not found
     return false;
 }
+
+void TaskManager::clearAllTasks() {
+    // Clear in-memory task list
+    tasks.clear();
+    
+    // Reset ID counter
+    repository.resetIdCounter();
+    
+    // Persist empty list
+    repository.saveTasks(tasks);
+}

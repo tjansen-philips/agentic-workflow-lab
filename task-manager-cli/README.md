@@ -7,6 +7,7 @@ A minimal command-line task manager built with C++17 for demonstration purposes.
 - **Add Tasks**: Create tasks with descriptive text
 - **List Tasks**: View all tasks with their completion status
 - **Complete Tasks**: Mark tasks as done
+- **Clear Tasks**: Remove all tasks and reset ID counter
 - **File Persistence**: Tasks are saved to JSON and persist across sessions
 
 ## Requirements
@@ -79,6 +80,14 @@ Output example:
 
 Mark task with ID 1 as completed.
 
+### Clear All Tasks
+
+```powershell
+.\task-manager.exe clear
+```
+
+Remove all tasks from the list and reset the ID counter to 1. The next task added will have ID 1.
+
 ### Show Help
 
 ```powershell
@@ -131,11 +140,11 @@ Example `tasks.json`:
 The project includes comprehensive unit tests for all layers:
 
 - **Task Tests**: Data model and JSON serialization (6 tests)
-- **TaskRepository Tests**: File I/O and persistence (7 tests)
-- **TaskManager Tests**: Business logic (9 tests)
-- **CLI Tests**: Command parsing and display (12 tests)
+- **TaskRepository Tests**: File I/O, persistence, and ID management (9 tests)
+- **TaskManager Tests**: Business logic including clear functionality (13 tests)
+- **CLI Tests**: Command parsing and display (13 tests)
 
-**Total: 34 tests with 100% pass rate**
+**Total: 41 tests with 100% pass rate**
 
 ### Running Specific Tests
 
