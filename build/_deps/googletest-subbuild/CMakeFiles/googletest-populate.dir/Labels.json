@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/d159fe24a04b6a689e49b79533c3da12/googletest-populate.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/2cf83808fa67ff2622a4b90c8d992198/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-build.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-download.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-install.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-test.rule"
+		},
+		{
+			"file" : "D:/git/agentic-workflow-lab/build/_deps/googletest-subbuild/CMakeFiles/b6eb3cd73e8669f884a0e29f8dfce1a9/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}

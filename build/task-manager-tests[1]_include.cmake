@@ -1,0 +1,5 @@
+if(EXISTS "D:/git/agentic-workflow-lab/build/task-manager-tests[1]_tests.cmake")
+  include("D:/git/agentic-workflow-lab/build/task-manager-tests[1]_tests.cmake")
+else()
+  add_test(task-manager-tests_NOT_BUILT task-manager-tests_NOT_BUILT)
+endif()

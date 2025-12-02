@@ -1,0 +1,60 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: D:/git/agentic-workflow-lab/task-manager-cli/build/CMakeFiles/CMakeScratch/TryCompile-8gfeo4
+
+Run Build Command(s):C:/VS2022/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_51364.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.14.19+164abd434 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_51364.dir\Debug\\" /Fd"cmTC_51364.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\CMakeScratch\TryCompile-8gfeo4\src.c"
+  src.c
+D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\CMakeScratch\TryCompile-8gfeo4\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\CMakeScratch\TryCompile-8gfeo4\cmTC_51364.vcxproj]
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: D:/git/agentic-workflow-lab/task-manager-cli/build/CMakeFiles/CMakeScratch/TryCompile-z1favc
+
+Run Build Command(s):C:/VS2022/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ee1ea.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.14.19+164abd434 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ee1ea.dir\Debug\\" /Fd"cmTC_ee1ea.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\CMakeScratch\TryCompile-z1favc\CheckFunctionExists.c"
+  CheckFunctionExists.c
+LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\CMakeScratch\TryCompile-z1favc\cmTC_ee1ea.vcxproj]
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: D:/git/agentic-workflow-lab/task-manager-cli/build/CMakeFiles/CMakeScratch/TryCompile-oric9z
+
+Run Build Command(s):C:/VS2022/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_53006.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.14.19+164abd434 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35215 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_53006.dir\Debug\\" /Fd"cmTC_53006.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\CMakeScratch\TryCompile-oric9z\CheckFunctionExists.c"
+  CheckFunctionExists.c
+LINK : fatal error LNK1104: cannot open file 'pthread.lib' [D:\git\agentic-workflow-lab\task-manager-cli\build\CMakeFiles\CMakeScratch\TryCompile-oric9z\cmTC_53006.vcxproj]
+
+
+
