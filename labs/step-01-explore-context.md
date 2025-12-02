@@ -24,7 +24,7 @@ These files establish the shared understanding required for both developers and 
 
 ## ⚙️ **2. Review and update the Custom Copilot Instructions**
 
-- Open **`.github/copilot-instructions.md`**  
+- Open **`.github/custom-instructions.md`**  
   This file defines the project-wide context injected into all GitHub Copilot interactions.
 
 Pay attention to:

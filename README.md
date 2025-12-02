@@ -19,7 +19,7 @@ To complete the hands-on labs, ensure you have the following:
 - **GitHub Copilot** - VS Code extension ([github.copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) v1.284.0 or later)
 - **GitHub Copilot Chat** - VS Code extension ([github.copilot-chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) v0.25.1 or later)
 - **GitHub Pull Requests** - VS Code extension ([github.vscode-pull-request-github](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) 0.120.0 or later)
-- **GitHub MCP Server** - VS Code extension for agentic workflows ([github.vscode-github-mcp](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-mcp))
+- **GitHub MCP Server** - VS Code extension for agentic workflows ([github.vscode-github-mcp](https://github.com/github/github-mcp-server))
 - **Git** – [Download here](https://git-scm.com/install/)
 
 ### Install the GitHub MCP server
