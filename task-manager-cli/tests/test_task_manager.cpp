@@ -1,11 +1,24 @@
 #include <gtest/gtest.h>
 #include "task_manager.h"
-#include "task_repository.h"
+#include "mock_task_repository.h"
+#include "file_task_repository.h"
 #include <filesystem>
 
 namespace fs = std::filesystem;
 
 class TaskManagerTest : public ::testing::Test {
+protected:
+    void SetUp() override {
+        // No file I/O needed - using mock
+    }
+    
+    void TearDown() override {
+        // No cleanup needed - using mock
+    }
+};
+
+// Separate test fixture for persistence tests that need file I/O
+class TaskManagerPersistenceTest : public ::testing::Test {
 protected:
     std::string testFilePath;
     
@@ -25,7 +38,7 @@ protected:
 
 // Test adding a task
 TEST_F(TaskManagerTest, AddTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     int taskId = manager.addTask("Buy groceries");
@@ -41,7 +54,7 @@ TEST_F(TaskManagerTest, AddTask) {
 
 // Test adding multiple tasks
 TEST_F(TaskManagerTest, AddMultipleTasks) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     int id1 = manager.addTask("Task 1");
@@ -58,7 +71,7 @@ TEST_F(TaskManagerTest, AddMultipleTasks) {
 
 // Test adding task with empty description (should be allowed but not ideal)
 TEST_F(TaskManagerTest, AddTaskEmptyDescription) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     int taskId = manager.addTask("");
@@ -72,7 +85,7 @@ TEST_F(TaskManagerTest, AddTaskEmptyDescription) {
 
 // Test listing tasks when empty
 TEST_F(TaskManagerTest, ListTasksEmpty) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     std::vector<Task> tasks = manager.listTasks();
@@ -81,7 +94,7 @@ TEST_F(TaskManagerTest, ListTasksEmpty) {
 
 // Test completing a task
 TEST_F(TaskManagerTest, CompleteTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task to complete");
@@ -96,7 +109,7 @@ TEST_F(TaskManagerTest, CompleteTask) {
 
 // Test completing non-existent task
 TEST_F(TaskManagerTest, CompleteNonExistentTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     bool success = manager.completeTask(999);
@@ -105,7 +118,7 @@ TEST_F(TaskManagerTest, CompleteNonExistentTask) {
 
 // Test completing task with mixed tasks
 TEST_F(TaskManagerTest, CompleteSpecificTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task 1");
@@ -122,9 +135,9 @@ TEST_F(TaskManagerTest, CompleteSpecificTask) {
 }
 
 // Test persistence - tasks should survive manager restart
-TEST_F(TaskManagerTest, PersistenceAcrossRestarts) {
+TEST_F(TaskManagerPersistenceTest, PersistenceAcrossRestarts) {
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Persistent task");
@@ -133,7 +146,7 @@ TEST_F(TaskManagerTest, PersistenceAcrossRestarts) {
     
     // Create new manager instance with same file
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         std::vector<Task> tasks = manager.listTasks();
@@ -144,9 +157,9 @@ TEST_F(TaskManagerTest, PersistenceAcrossRestarts) {
 }
 
 // Test ID continuity after restart
-TEST_F(TaskManagerTest, IdContinuityAfterRestart) {
+TEST_F(TaskManagerPersistenceTest, IdContinuityAfterRestart) {
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Task 1");
@@ -154,7 +167,7 @@ TEST_F(TaskManagerTest, IdContinuityAfterRestart) {
     }
     
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         int id = manager.addTask("Task 3");
@@ -164,7 +177,7 @@ TEST_F(TaskManagerTest, IdContinuityAfterRestart) {
 
 // Test clearing all tasks
 TEST_F(TaskManagerTest, ClearAllTasks) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task 1");
@@ -180,7 +193,7 @@ TEST_F(TaskManagerTest, ClearAllTasks) {
 
 // Test clearing empty list
 TEST_F(TaskManagerTest, ClearEmptyList) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     EXPECT_TRUE(manager.listTasks().empty());
@@ -192,7 +205,7 @@ TEST_F(TaskManagerTest, ClearEmptyList) {
 
 // Test ID reset after clear
 TEST_F(TaskManagerTest, IdResetAfterClear) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task 1");
@@ -207,9 +220,9 @@ TEST_F(TaskManagerTest, IdResetAfterClear) {
 }
 
 // Test clear persistence
-TEST_F(TaskManagerTest, ClearPersistence) {
+TEST_F(TaskManagerPersistenceTest, ClearPersistence) {
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Task 1");
@@ -219,7 +232,7 @@ TEST_F(TaskManagerTest, ClearPersistence) {
     
     // Verify clear was persisted
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         EXPECT_TRUE(manager.listTasks().empty());

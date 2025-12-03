@@ -1,6 +1,6 @@
 #include "cli.h"
 #include "task_manager.h"
-#include "task_repository.h"
+#include "file_task_repository.h"
 #include <iostream>
 #include <filesystem>
 
@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
         std::string tasksFile = (exePath / "tasks.json").string();
 
         // Initialize repository and manager
-        TaskRepository repository(tasksFile);
+        FileTaskRepository repository(tasksFile);
         TaskManager manager(repository);
 
         // Parse command

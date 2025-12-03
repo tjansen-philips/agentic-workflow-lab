@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "task_repository.h"
+#include "file_task_repository.h"
 #include "task.h"
 #include <filesystem>
 #include <fstream>
@@ -29,7 +29,7 @@ protected:
 
 // Test loading from non-existent file (should create empty file)
 TEST_F(TaskRepositoryTest, LoadFromNonExistentFile) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     std::vector<Task> tasks = repo.loadTasks();
     
     EXPECT_TRUE(tasks.empty());
@@ -38,7 +38,7 @@ TEST_F(TaskRepositoryTest, LoadFromNonExistentFile) {
 
 // Test saving and loading tasks
 TEST_F(TaskRepositoryTest, SaveAndLoadTasks) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     
     std::vector<Task> tasksToSave = {
         Task(1, "Task 1", false),
@@ -74,7 +74,7 @@ TEST_F(TaskRepositoryTest, LoadFromExistingFile) {
     ])";
     file.close();
     
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     std::vector<Task> tasks = repo.loadTasks();
     
     ASSERT_EQ(tasks.size(), 2);
@@ -89,7 +89,7 @@ TEST_F(TaskRepositoryTest, LoadFromExistingFile) {
 
 // Test getNextId with empty repository
 TEST_F(TaskRepositoryTest, GetNextIdEmpty) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     repo.loadTasks(); // Initialize with empty file
     
     EXPECT_EQ(repo.getNextId(), 1);
@@ -97,7 +97,7 @@ TEST_F(TaskRepositoryTest, GetNextIdEmpty) {
 
 // Test getNextId with existing tasks
 TEST_F(TaskRepositoryTest, GetNextIdWithExistingTasks) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     
     std::vector<Task> tasks = {
         Task(1, "Task 1", false),
@@ -113,7 +113,7 @@ TEST_F(TaskRepositoryTest, GetNextIdWithExistingTasks) {
 
 // Test saving empty task list
 TEST_F(TaskRepositoryTest, SaveEmptyList) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     
     std::vector<Task> emptyTasks;
     repo.saveTasks(emptyTasks);
@@ -124,7 +124,7 @@ TEST_F(TaskRepositoryTest, SaveEmptyList) {
 
 // Test persistence across multiple operations
 TEST_F(TaskRepositoryTest, MultipleSaveLoadCycles) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     
     // First save
     std::vector<Task> tasks1 = {Task(1, "First", false)};
@@ -146,7 +146,7 @@ TEST_F(TaskRepositoryTest, MultipleSaveLoadCycles) {
 
 // Test resetting ID counter
 TEST_F(TaskRepositoryTest, ResetIdCounter) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     
     // Add some tasks with high IDs
     std::vector<Task> tasks = {
@@ -166,7 +166,7 @@ TEST_F(TaskRepositoryTest, ResetIdCounter) {
 
 // Test reset on empty repository
 TEST_F(TaskRepositoryTest, ResetIdCounterOnEmpty) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     repo.loadTasks(); // Empty list
     
     repo.resetIdCounter();

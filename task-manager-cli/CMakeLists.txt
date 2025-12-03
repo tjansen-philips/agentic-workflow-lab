@@ -22,7 +22,7 @@ include_directories(${CMAKE_SOURCE_DIR}/src)
 # Source files
 set(SOURCES
     src/task.cpp
-    src/task_repository.cpp
+    src/file_task_repository.cpp
     src/task_manager.cpp
     src/cli.cpp
 )
