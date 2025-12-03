@@ -233,3 +233,55 @@ TEST_F(TaskManagerPersistenceTest, ClearPersistence) {
         EXPECT_EQ(newId, 1); // ID should be reset
     }
 }
+
+// Test task ordering is preserved
+TEST_F(TaskManagerTest, TaskOrderingPreserved) {
+    MockTaskRepository repo;
+    TaskManager manager(repo);
+    
+    manager.addTask("First task");
+    manager.addTask("Second task");
+    manager.addTask("Third task");
+    
+    std::vector<Task> tasks = manager.listTasks();
+    ASSERT_EQ(tasks.size(), 3);
+    EXPECT_EQ(tasks[0].getDescription(), "First task");
+    EXPECT_EQ(tasks[1].getDescription(), "Second task");
+    EXPECT_EQ(tasks[2].getDescription(), "Third task");
+}
+
+// Test completing multiple tasks
+TEST_F(TaskManagerTest, CompleteMultipleTasks) {
+    MockTaskRepository repo;
+    TaskManager manager(repo);
+    
+    manager.addTask("Task 1");
+    manager.addTask("Task 2");
+    manager.addTask("Task 3");
+    manager.addTask("Task 4");
+    
+    manager.completeTask(2);
+    manager.completeTask(4);
+    
+    std::vector<Task> tasks = manager.listTasks();
+    ASSERT_EQ(tasks.size(), 4);
+    EXPECT_FALSE(tasks[0].isCompleted());
+    EXPECT_TRUE(tasks[1].isCompleted());
+    EXPECT_FALSE(tasks[2].isCompleted());
+    EXPECT_TRUE(tasks[3].isCompleted());
+}
+
+// Test that repository is called with correct data
+TEST_F(TaskManagerTest, RepositorySavesCorrectly) {
+    MockTaskRepository repo;
+    TaskManager manager(repo);
+    
+    manager.addTask("Test task");
+    
+    // Verify the repository has the task saved
+    const std::vector<Task>& savedTasks = repo.getTasks();
+    ASSERT_EQ(savedTasks.size(), 1);
+    EXPECT_EQ(savedTasks[0].getId(), 1);
+    EXPECT_EQ(savedTasks[0].getDescription(), "Test task");
+    EXPECT_FALSE(savedTasks[0].isCompleted());
+}
