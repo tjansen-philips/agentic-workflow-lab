@@ -1,6 +1,6 @@
 #include "task_manager.h"
 
-TaskManager::TaskManager(TaskRepository& repository)
+TaskManager::TaskManager(ITaskRepository& repository)
     : repository(repository) {
     // Load existing tasks from repository
     tasks = repository.loadTasks();

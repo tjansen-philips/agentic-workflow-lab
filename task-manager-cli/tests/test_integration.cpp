@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "cli.h"
 #include "task_manager.h"
-#include "task_repository.h"
+#include "file_task_repository.h"
 #include "task.h"
 #include <nlohmann/json.hpp>
 #include <filesystem>
@@ -61,7 +61,7 @@ protected:
 TEST_F(IntegrationTest, AddMultipleTasksAndList) {
     // Simulate user session 1: Add tasks
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         CLI cli;
         
@@ -112,7 +112,7 @@ TEST_F(IntegrationTest, AddMultipleTasksAndList) {
 TEST_F(IntegrationTest, CompleteTasksAndVerifyPersistence) {
     // Session 1: Add tasks
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Task 1");
@@ -122,7 +122,7 @@ TEST_F(IntegrationTest, CompleteTasksAndVerifyPersistence) {
     
     // Session 2: Complete tasks
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         // Complete tasks 1 and 3
@@ -142,7 +142,7 @@ TEST_F(IntegrationTest, CompleteTasksAndVerifyPersistence) {
     
     // Session 3: Verify persistence across restart
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         std::vector<Task> tasks = manager.listTasks();
@@ -174,7 +174,7 @@ TEST_F(IntegrationTest, CompleteTasksAndVerifyPersistence) {
 TEST_F(IntegrationTest, ClearTasksAndVerifyIdReset) {
     // Session 1: Add and complete some tasks
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Task 1");
@@ -185,7 +185,7 @@ TEST_F(IntegrationTest, ClearTasksAndVerifyIdReset) {
     
     // Session 2: Clear all tasks
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         std::vector<Task> beforeClear = manager.listTasks();
@@ -199,7 +199,7 @@ TEST_F(IntegrationTest, ClearTasksAndVerifyIdReset) {
     
     // Session 3: Verify ID counter reset
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         // Add new task, ID should start from 1
@@ -222,7 +222,7 @@ TEST_F(IntegrationTest, ClearTasksAndVerifyIdReset) {
 TEST_F(IntegrationTest, CrossSessionPersistence) {
     // Session 1: Setup initial state
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Persistent task 1");
@@ -233,7 +233,7 @@ TEST_F(IntegrationTest, CrossSessionPersistence) {
     
     // Simulate application restart - Session 2
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         std::vector<Task> tasks = manager.listTasks();
@@ -258,7 +258,7 @@ TEST_F(IntegrationTest, CrossSessionPersistence) {
     
     // Simulate another restart - Session 3
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         std::vector<Task> tasks = manager.listTasks();
@@ -282,7 +282,7 @@ TEST_F(IntegrationTest, CrossSessionPersistence) {
 
 // Test: Complete workflow (add→list→complete→list→clear→list)
 TEST_F(IntegrationTest, CompleteWorkflow) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     TaskManager manager(repo);
     CLI cli;
     
@@ -325,7 +325,7 @@ TEST_F(IntegrationTest, CompleteWorkflow) {
 
 // Test: Error handling - complete non-existent task
 TEST_F(IntegrationTest, ErrorHandlingCompleteNonExistent) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     TaskManager manager(repo);
     
     manager.addTask("Task 1");
@@ -344,7 +344,7 @@ TEST_F(IntegrationTest, ErrorHandlingCompleteNonExistent) {
 
 // Test: Error handling - empty task description
 TEST_F(IntegrationTest, ErrorHandlingEmptyDescription) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     TaskManager manager(repo);
     
     // Add task with empty description (should be allowed per current implementation)
@@ -360,7 +360,7 @@ TEST_F(IntegrationTest, ErrorHandlingEmptyDescription) {
 TEST_F(IntegrationTest, MultiSessionIdContinuity) {
     // Session 1: Add tasks with IDs 1, 2, 3
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         EXPECT_EQ(manager.addTask("Task 1"), 1);
@@ -370,7 +370,7 @@ TEST_F(IntegrationTest, MultiSessionIdContinuity) {
     
     // Session 2: Next ID should be 4
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         EXPECT_EQ(manager.addTask("Task 4"), 4);
@@ -378,7 +378,7 @@ TEST_F(IntegrationTest, MultiSessionIdContinuity) {
     
     // Session 3: Complete and add more
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.completeTask(2);
@@ -387,7 +387,7 @@ TEST_F(IntegrationTest, MultiSessionIdContinuity) {
     
     // Final verification
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         std::vector<Task> tasks = manager.listTasks();
@@ -497,7 +497,7 @@ TEST_F(IntegrationTest, FileCorruptionHandling) {
     // Repository should handle gracefully (current implementation may throw)
     // This test documents current behavior and ensures it doesn't crash
     try {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         std::vector<Task> tasks = repo.loadTasks();
         // If we get here, corruption was handled gracefully
         SUCCEED();
@@ -512,7 +512,7 @@ TEST_F(IntegrationTest, FileCorruptionHandling) {
 
 // Test: Large number of tasks (stress test)
 TEST_F(IntegrationTest, LargeNumberOfTasks) {
-    TaskRepository repo(testFilePath);
+    FileTaskRepository repo(testFilePath);
     TaskManager manager(repo);
     
     // Add 100 tasks

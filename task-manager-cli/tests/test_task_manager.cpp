@@ -1,11 +1,16 @@
 #include <gtest/gtest.h>
 #include "task_manager.h"
-#include "task_repository.h"
+#include "mock_task_repository.h"
+#include "file_task_repository.h"
 #include <filesystem>
 
 namespace fs = std::filesystem;
 
 class TaskManagerTest : public ::testing::Test {
+};
+
+// Separate test fixture for persistence tests that need file I/O
+class TaskManagerPersistenceTest : public ::testing::Test {
 protected:
     std::string testFilePath;
     
@@ -25,7 +30,7 @@ protected:
 
 // Test adding a task
 TEST_F(TaskManagerTest, AddTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     int taskId = manager.addTask("Buy groceries");
@@ -41,7 +46,7 @@ TEST_F(TaskManagerTest, AddTask) {
 
 // Test adding multiple tasks
 TEST_F(TaskManagerTest, AddMultipleTasks) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     int id1 = manager.addTask("Task 1");
@@ -58,7 +63,7 @@ TEST_F(TaskManagerTest, AddMultipleTasks) {
 
 // Test adding task with empty description (should be allowed but not ideal)
 TEST_F(TaskManagerTest, AddTaskEmptyDescription) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     int taskId = manager.addTask("");
@@ -72,7 +77,7 @@ TEST_F(TaskManagerTest, AddTaskEmptyDescription) {
 
 // Test listing tasks when empty
 TEST_F(TaskManagerTest, ListTasksEmpty) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     std::vector<Task> tasks = manager.listTasks();
@@ -81,7 +86,7 @@ TEST_F(TaskManagerTest, ListTasksEmpty) {
 
 // Test completing a task
 TEST_F(TaskManagerTest, CompleteTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task to complete");
@@ -96,7 +101,7 @@ TEST_F(TaskManagerTest, CompleteTask) {
 
 // Test completing non-existent task
 TEST_F(TaskManagerTest, CompleteNonExistentTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     bool success = manager.completeTask(999);
@@ -105,7 +110,7 @@ TEST_F(TaskManagerTest, CompleteNonExistentTask) {
 
 // Test completing task with mixed tasks
 TEST_F(TaskManagerTest, CompleteSpecificTask) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task 1");
@@ -122,9 +127,9 @@ TEST_F(TaskManagerTest, CompleteSpecificTask) {
 }
 
 // Test persistence - tasks should survive manager restart
-TEST_F(TaskManagerTest, PersistenceAcrossRestarts) {
+TEST_F(TaskManagerPersistenceTest, PersistenceAcrossRestarts) {
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Persistent task");
@@ -133,7 +138,7 @@ TEST_F(TaskManagerTest, PersistenceAcrossRestarts) {
     
     // Create new manager instance with same file
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         std::vector<Task> tasks = manager.listTasks();
@@ -144,9 +149,9 @@ TEST_F(TaskManagerTest, PersistenceAcrossRestarts) {
 }
 
 // Test ID continuity after restart
-TEST_F(TaskManagerTest, IdContinuityAfterRestart) {
+TEST_F(TaskManagerPersistenceTest, IdContinuityAfterRestart) {
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Task 1");
@@ -154,7 +159,7 @@ TEST_F(TaskManagerTest, IdContinuityAfterRestart) {
     }
     
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         int id = manager.addTask("Task 3");
@@ -164,7 +169,7 @@ TEST_F(TaskManagerTest, IdContinuityAfterRestart) {
 
 // Test clearing all tasks
 TEST_F(TaskManagerTest, ClearAllTasks) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task 1");
@@ -180,7 +185,7 @@ TEST_F(TaskManagerTest, ClearAllTasks) {
 
 // Test clearing empty list
 TEST_F(TaskManagerTest, ClearEmptyList) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     EXPECT_TRUE(manager.listTasks().empty());
@@ -192,7 +197,7 @@ TEST_F(TaskManagerTest, ClearEmptyList) {
 
 // Test ID reset after clear
 TEST_F(TaskManagerTest, IdResetAfterClear) {
-    TaskRepository repo(testFilePath);
+    MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Task 1");
@@ -207,9 +212,9 @@ TEST_F(TaskManagerTest, IdResetAfterClear) {
 }
 
 // Test clear persistence
-TEST_F(TaskManagerTest, ClearPersistence) {
+TEST_F(TaskManagerPersistenceTest, ClearPersistence) {
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         manager.addTask("Task 1");
@@ -219,7 +224,7 @@ TEST_F(TaskManagerTest, ClearPersistence) {
     
     // Verify clear was persisted
     {
-        TaskRepository repo(testFilePath);
+        FileTaskRepository repo(testFilePath);
         TaskManager manager(repo);
         
         EXPECT_TRUE(manager.listTasks().empty());
@@ -227,4 +232,58 @@ TEST_F(TaskManagerTest, ClearPersistence) {
         int newId = manager.addTask("New task");
         EXPECT_EQ(newId, 1); // ID should be reset
     }
+}
+
+// Test task ordering is preserved
+TEST_F(TaskManagerTest, TaskOrderingPreserved) {
+    MockTaskRepository repo;
+    TaskManager manager(repo);
+    
+    manager.addTask("First task");
+    manager.addTask("Second task");
+    manager.addTask("Third task");
+    
+    std::vector<Task> tasks = manager.listTasks();
+    ASSERT_EQ(tasks.size(), 3);
+    EXPECT_EQ(tasks[0].getDescription(), "First task");
+    EXPECT_EQ(tasks[1].getDescription(), "Second task");
+    EXPECT_EQ(tasks[2].getDescription(), "Third task");
+}
+
+// Test completing multiple tasks
+TEST_F(TaskManagerTest, CompleteMultipleTasks) {
+    MockTaskRepository repo;
+    TaskManager manager(repo);
+    
+    manager.addTask("Task 1");
+    manager.addTask("Task 2");
+    manager.addTask("Task 3");
+    manager.addTask("Task 4");
+    
+    manager.completeTask(2);
+    manager.completeTask(4);
+    
+    std::vector<Task> tasks = manager.listTasks();
+    ASSERT_EQ(tasks.size(), 4);
+    EXPECT_FALSE(tasks[0].isCompleted());
+    EXPECT_TRUE(tasks[1].isCompleted());
+    EXPECT_FALSE(tasks[2].isCompleted());
+    EXPECT_TRUE(tasks[3].isCompleted());
+}
+
+// Test that repository saves and loads correctly
+TEST_F(TaskManagerTest, RepositorySavesCorrectly) {
+    MockTaskRepository repo;
+    TaskManager manager(repo);
+    
+    manager.addTask("Test task");
+    
+    // Verify the repository persists correctly by creating a new manager instance
+    TaskManager manager2(repo);
+    std::vector<Task> tasks = manager2.listTasks();
+    
+    ASSERT_EQ(tasks.size(), 1);
+    EXPECT_EQ(tasks[0].getId(), 1);
+    EXPECT_EQ(tasks[0].getDescription(), "Test task");
+    EXPECT_FALSE(tasks[0].isCompleted());
 }

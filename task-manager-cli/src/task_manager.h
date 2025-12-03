@@ -4,16 +4,16 @@
 #include <vector>
 #include <string>
 #include "task.h"
-#include "task_repository.h"
+#include "i_task_repository.h"
 
 class TaskManager {
 private:
-    TaskRepository& repository;
+    ITaskRepository& repository;
     std::vector<Task> tasks;
 
 public:
     // Constructor
-    explicit TaskManager(TaskRepository& repository);
+    explicit TaskManager(ITaskRepository& repository);
 
     // Add a new task
     int addTask(const std::string& description);
