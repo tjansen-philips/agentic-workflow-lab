@@ -30,7 +30,7 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake g++ gcov lcov
+        sudo apt-get install -y cmake g++ lcov
         
     - name: Set up build environment (macOS)
       if: runner.os == 'macOS'
@@ -75,7 +75,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake g++ gcov lcov
+        sudo apt-get install -y cmake g++ lcov
         
     - name: Configure CMake with Coverage
       working-directory: task-manager-cli
