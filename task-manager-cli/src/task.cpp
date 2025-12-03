@@ -30,8 +30,8 @@ json Task::toJson() const {
 
 Task Task::fromJson(const json& j) {
     return Task(
-        j["id"].get<int>(),
-        j["description"].get<std::string>(),
-        j["completed"].get<bool>()
+        j.at("id").get<int>(),
+        j.at("description").get<std::string>(),
+        j.at("completed").get<bool>()
     );
 }

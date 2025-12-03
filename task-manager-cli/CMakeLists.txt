@@ -51,6 +51,7 @@ add_executable(task-manager-tests
     tests/test_task_manager.cpp
     tests/test_cli.cpp
     tests/test_integration.cpp
+    tests/test_error_handling.cpp
     ${SOURCES}
 )
 
