@@ -24,12 +24,19 @@ These files establish the shared understanding required for both developers and 
 
 ## ⚙️ **2. Review and update the Custom Copilot Instructions**
 
+### Helpful links for customizing responses
+
+- **Repository Custom Instructions:** Configure project-wide instructions in VS Code — [add-repository-instructions](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=vscode)
+- **Custom Agents Concept:** Build tailored Copilot agents — [custom-agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
+- **Customization Library:** Examples of well-defined instructions, prompts, and agents — [customization-library](https://docs.github.com/en/copilot/tutorials/customization/customization-library)
+- **Community Examples:** Curated list of prompts, agents, and repos — [awesome-copilot](https://github.com/github/awesome-copilot)
+
+
 - Open **`.github/copilot-instructions.md`**  
   This file defines the project-wide context injected into all GitHub Copilot interactions.
 
 Pay attention to:
 - How the file references your documentation (PRODUCT, ARCHITECTURE, CONTRIBUTING)  
-
 - Update CONTRIBUTING guidlines for the language of your choice. 
 - Adjust PRODUCT, ARCHITECTURE, custom-instructions file if needed.
 
