@@ -1,6 +1,7 @@
 #include "cli.h"
 #include "task_manager.h"
 #include "file_task_repository.h"
+#include "repository_exceptions.h"
 #include <iostream>
 #include <filesystem>
 
@@ -68,6 +69,20 @@ int main(int argc, char* argv[]) {
         }
 
         return 0;
+    }
+    catch (const JsonParseException& e) {
+        std::cerr << "JSON Error: " << e.what() << "\n";
+        std::cerr << "The tasks file may be corrupted. Please check or delete the tasks.json file.\n";
+        return 1;
+    }
+    catch (const FileIOException& e) {
+        std::cerr << "File Error: " << e.what() << "\n";
+        std::cerr << "Please check file permissions and available disk space.\n";
+        return 1;
+    }
+    catch (const RepositoryException& e) {
+        std::cerr << "Repository Error: " << e.what() << "\n";
+        return 1;
     }
     catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << "\n";

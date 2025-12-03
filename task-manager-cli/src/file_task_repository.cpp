@@ -1,4 +1,6 @@
 #include "file_task_repository.h"
+#include "repository_exceptions.h"
+#include "error_logger.h"
 #include <nlohmann/json.hpp>
 #include <fstream>
 #include <filesystem>
@@ -15,18 +17,30 @@ std::vector<Task> FileTaskRepository::loadTasks() {
 
     // Check if file exists
     if (!fs::exists(filePath)) {
-        // Create empty file
-        std::ofstream file(filePath);
-        file << "[]";
-        file.close();
-        return tasks;
+        try {
+            // Create empty file
+            std::ofstream file(filePath);
+            if (!file.is_open()) {
+                std::string errorMsg = "Cannot create file: " + filePath;
+                ErrorLogger::logError("loadTasks", errorMsg);
+                throw FileIOException(errorMsg);
+            }
+            file << "[]";
+            file.close();
+            return tasks;
+        } catch (const std::filesystem::filesystem_error& e) {
+            std::string errorMsg = "Filesystem error creating file '" + filePath + "': " + e.what();
+            ErrorLogger::logError("loadTasks", errorMsg);
+            throw FileIOException(errorMsg);
+        }
     }
 
     // Read file
     std::ifstream file(filePath);
     if (!file.is_open()) {
-        // If we can't open, return empty vector
-        return tasks;
+        std::string errorMsg = "Cannot open file for reading: " + filePath;
+        ErrorLogger::logError("loadTasks", errorMsg);
+        throw FileIOException(errorMsg);
     }
 
     json j;
@@ -44,10 +58,20 @@ std::vector<Task> FileTaskRepository::loadTasks() {
                     maxId = task.getId();
                 }
             }
+        } else {
+            std::string errorMsg = "Invalid JSON format: expected array";
+            ErrorLogger::logError("loadTasks", errorMsg);
+            throw JsonParseException(errorMsg);
         }
-    } catch (...) {
-        // If JSON parsing fails, return empty vector
+    } catch (const nlohmann::json::exception& e) {
+        std::string errorMsg = "Failed to parse JSON from '" + filePath + "': " + e.what();
+        ErrorLogger::logError("loadTasks", errorMsg);
         tasks.clear();
+        throw JsonParseException(errorMsg);
+    } catch (const std::ios_base::failure& e) {
+        std::string errorMsg = "File stream error reading '" + filePath + "': " + e.what();
+        ErrorLogger::logError("loadTasks", errorMsg);
+        throw FileIOException(errorMsg);
     }
 
     file.close();
@@ -57,18 +81,41 @@ std::vector<Task> FileTaskRepository::loadTasks() {
 void FileTaskRepository::saveTasks(const std::vector<Task>& tasks) {
     json j = json::array();
 
-    for (const auto& task : tasks) {
-        j.push_back(task.toJson());
-        
-        // Update maxId while saving
-        if (task.getId() > maxId) {
-            maxId = task.getId();
+    try {
+        for (const auto& task : tasks) {
+            j.push_back(task.toJson());
+            
+            // Update maxId while saving
+            if (task.getId() > maxId) {
+                maxId = task.getId();
+            }
         }
-    }
 
-    std::ofstream file(filePath);
-    file << j.dump(2); // Pretty print with 2-space indent
-    file.close();
+        std::ofstream file(filePath);
+        if (!file.is_open()) {
+            std::string errorMsg = "Cannot open file for writing: " + filePath;
+            ErrorLogger::logError("saveTasks", errorMsg);
+            throw FileIOException(errorMsg);
+        }
+        
+        file << j.dump(2); // Pretty print with 2-space indent
+        
+        if (file.fail()) {
+            std::string errorMsg = "Failed to write to file: " + filePath;
+            ErrorLogger::logError("saveTasks", errorMsg);
+            throw FileIOException(errorMsg);
+        }
+        
+        file.close();
+    } catch (const nlohmann::json::exception& e) {
+        std::string errorMsg = "Failed to serialize tasks to JSON: " + std::string(e.what());
+        ErrorLogger::logError("saveTasks", errorMsg);
+        throw JsonParseException(errorMsg);
+    } catch (const std::filesystem::filesystem_error& e) {
+        std::string errorMsg = "Filesystem error writing to '" + filePath + "': " + e.what();
+        ErrorLogger::logError("saveTasks", errorMsg);
+        throw FileIOException(errorMsg);
+    }
 }
 
 int FileTaskRepository::getNextId() const {
