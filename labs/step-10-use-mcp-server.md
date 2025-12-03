@@ -53,5 +53,16 @@ Verification:
 
 ---
 
+## 🔍 **Optional: Explore More MCP Servers**
+
+Extend your workflow with additional MCP servers:
+
+- **[MCP Servers Directory](https://github.com/modelcontextprotocol/servers)** — Browse the full collection
+- **[Azure DevOps MCP](https://github.com/microsoft/azure-devops-mcp)** — Manage work items, pipelines, and repos
+- **[CodeScene MCP](https://github.com/codescene-oss/codescene-mcp-server)** — Code health and behavioral analysis
+- **[10 Microsoft MCP Servers](https://developer.microsoft.com/blog/10-microsoft-mcp-servers-to-accelerate-your-development-workflow)** — Curated list to accelerate development
+
+---
+
 Previous: [Step 9 — Merge PR to your fork's main branch](./step-09-merge-pr-main.md)  
 Next: [Step 11 — Assign Coding agent for a selected issue](./step-11-assign-coding-agent.md)
