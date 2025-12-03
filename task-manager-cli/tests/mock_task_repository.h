@@ -52,11 +52,6 @@ public:
         maxId = 0;
     }
 
-    // Test helper: Get current tasks
-    const std::vector<Task>& getTasks() const {
-        return tasks;
-    }
-
     // Test helper: Clear all tasks
     void clear() {
         tasks.clear();

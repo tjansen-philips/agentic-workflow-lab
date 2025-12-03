@@ -271,17 +271,19 @@ TEST_F(TaskManagerTest, CompleteMultipleTasks) {
     EXPECT_TRUE(tasks[3].isCompleted());
 }
 
-// Test that repository is called with correct data
+// Test that repository saves and loads correctly
 TEST_F(TaskManagerTest, RepositorySavesCorrectly) {
     MockTaskRepository repo;
     TaskManager manager(repo);
     
     manager.addTask("Test task");
     
-    // Verify the repository has the task saved
-    const std::vector<Task>& savedTasks = repo.getTasks();
-    ASSERT_EQ(savedTasks.size(), 1);
-    EXPECT_EQ(savedTasks[0].getId(), 1);
-    EXPECT_EQ(savedTasks[0].getDescription(), "Test task");
-    EXPECT_FALSE(savedTasks[0].isCompleted());
+    // Verify the repository persists correctly by creating a new manager instance
+    TaskManager manager2(repo);
+    std::vector<Task> tasks = manager2.listTasks();
+    
+    ASSERT_EQ(tasks.size(), 1);
+    EXPECT_EQ(tasks[0].getId(), 1);
+    EXPECT_EQ(tasks[0].getDescription(), "Test task");
+    EXPECT_FALSE(tasks[0].isCompleted());
 }
