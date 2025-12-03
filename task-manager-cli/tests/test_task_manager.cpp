@@ -7,14 +7,6 @@
 namespace fs = std::filesystem;
 
 class TaskManagerTest : public ::testing::Test {
-protected:
-    void SetUp() override {
-        // No file I/O needed - using mock
-    }
-    
-    void TearDown() override {
-        // No cleanup needed - using mock
-    }
 };
 
 // Separate test fixture for persistence tests that need file I/O
