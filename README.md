@@ -69,6 +69,16 @@ You are set. If **github/github-mcp-server** does not show as Running, run **MCP
    git checkout -b feature/task-manager
    git push -u origin feature/task-manager
    ```
+4. **Set up upstream remote** (optional, for syncing with the original repository):
+   ```bash
+   ./scripts/setup-repository.sh
+   ```
+   Or manually:
+   ```bash
+   git remote add upstream https://github.com/xebia/agentic-workflow-lab.git
+   git remote set-url --push upstream no-push
+   ```
+   > See [docs/UPSTREAM_SYNC.md](docs/UPSTREAM_SYNC.md) for detailed instructions on syncing with upstream.
 
 > **Note:** All changes you make will go on this feature branch. You'll create a Pull Request later to merge your work.
 

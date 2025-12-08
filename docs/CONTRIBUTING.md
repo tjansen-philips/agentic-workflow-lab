@@ -106,6 +106,31 @@ When adding features:
 - Support C++17 standard minimum
 - Ensure cross-platform compatibility (Windows, Linux, macOS)
 
+## Fork Maintenance
+
+If you've forked this repository, keep your fork synchronized with upstream:
+
+1. Configure upstream remote (one-time setup):
+   ```bash
+   git remote add upstream https://github.com/xebia/agentic-workflow-lab.git
+   git remote set-url --push upstream no-push
+   ```
+
+2. Use the automated sync script:
+   ```bash
+   ./scripts/sync-upstream.sh
+   ```
+
+3. Or manually sync:
+   ```bash
+   git fetch upstream
+   git checkout main
+   git merge upstream/main
+   git push origin main
+   ```
+
+For detailed instructions, see [UPSTREAM_SYNC.md](UPSTREAM_SYNC.md).
+
 ## Pull Request Guidelines
 
 1. Ensure all tests pass (`ctest -C Debug`)
@@ -113,5 +138,6 @@ When adding features:
 3. Update documentation if adding features
 4. Keep commits focused and atomic
 5. Write clear commit messages
+6. Sync with upstream before creating PR (if applicable)
 
 
