@@ -18,43 +18,43 @@ To complete the hands-on labs, ensure you have the following:
 - **Visual Studio Code** (Latest) – [Download here](https://code.visualstudio.com/)
 - **GitHub Copilot** - VS Code extension ([github.copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) v1.284.0 or later)
 - **GitHub Copilot Chat** - VS Code extension ([github.copilot-chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) v0.25.1 or later)
-- **GitHub Pull Requests** - VS Code extension ([github.vscode-pull-request-github](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) 0.120.0 or later)
+- **GitHub Pull Requests**(optional) - VS Code extension ([github.vscode-pull-request-github](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) 0.120.0 or later)
 - **GitHub MCP Server** - VS Code extension for agentic workflows ([github.vscode-github-mcp](https://github.com/github/github-mcp-server))
 - **Git** – [Download here](https://git-scm.com/install/)
 
 ### Install the GitHub MCP server
 
-1. Open the **Extensions** view
+You have several options:
 
-   * Press **Ctrl+Shift+X**.
-   * In the search box, type **@mcp GitHub**.
-   * Find **GitHub — Official GitHub MCP Server** and click **Install**.
+1. You can install the server from the official page: https://github.com/github/github-mcp-server
 
-2. Approve the authentication prompt
+2. Or you can install the sevrer from the extensions:
+   - Open the **Extensions** view
+   - Press **Ctrl+Shift+X**.
+   - In the search box, type **@mcp GitHub**.
+   - Find **GitHub — Official GitHub MCP Server** and click **Install**.
 
-   * You will see a dialog, “The MCP Server Definition ‘github/github-mcp-server’ wants to authenticate to GitHub.”
-   * Click **Allow**.
+3. Approve the authentication prompt
+   - You will see a dialog, "The MCP Server Definition 'github/github-mcp-server' wants to authenticate to GitHub."
+   - Click **Allow**.
 
-3. Pick your GitHub account
+4. Pick your GitHub account
+   - A quick pick appears asking which account to use.
+   - Select your account, for example **YKhadas**.
+   - VS Code will finish connecting the server.
 
-   * A quick pick appears asking which account to use.
-   * Select your account, for example **YKhadas**.
-   * VS Code will finish connecting the server.
+5. Verify the server is running
+   - Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac) to open the Command Palette.
+   - Type **MCP: List Servers**, then press **Enter**.
+   - In the list, confirm **github/github-mcp-server** shows **Running**.
 
-4. Verify the server is running
+6. Enable the server in Copilot Chat tools
+   - Open the **GitHub Copilot Chat** panel.
+   - Click the **Tools** icon at the bottom right of the chat window. It opens the **Configure Tools** picker.
+   - In the list, find **MCP Server: github/github-mcp-server** and make sure it is **checked**.
+   - Click **OK** to save.
 
-   * Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac) to open the Command Palette.
-   * Type **MCP: List Servers**, then press **Enter**.
-   * In the list, confirm **github/github-mcp-server** shows **Running**.
-
-5. Enable the server in Copilot Chat tools
-
-   * Open the **GitHub Copilot Chat** panel.
-   * Click the **Tools** icon at the bottom right of the chat window. It opens the **Configure Tools** picker.
-   * In the list, find **MCP Server: github/github-mcp-server** and make sure it is **checked**.
-   * Click **OK** to save.
-
-You are set. If **github/github-mcp-server** does not show as Running, run **MCP: List Servers** again, or reload the window with **Developer: Reload Window**, then repeat step 5 to confirm the tool is checked.
+You are set. If **github/github-mcp-server** does not show as Running, run **MCP: List Servers** again, or reload the window with **Developer: Reload Window**, then repeat step 6 to confirm the tool is checked.
 
 ### GitHub Repository Setup
 
@@ -69,16 +69,6 @@ You are set. If **github/github-mcp-server** does not show as Running, run **MCP
    git checkout -b feature/task-manager
    git push -u origin feature/task-manager
    ```
-4. **Set up upstream remote** (optional, for syncing with the original repository):
-   ```bash
-   ./scripts/setup-repository.sh
-   ```
-   Or manually:
-   ```bash
-   git remote add upstream https://github.com/xebia/agentic-workflow-lab.git
-   git remote set-url --push upstream no-push
-   ```
-   > See [docs/UPSTREAM_SYNC.md](docs/UPSTREAM_SYNC.md) for detailed instructions on syncing with upstream.
 
 > **Note:** All changes you make will go on this feature branch. You'll create a Pull Request later to merge your work.
 

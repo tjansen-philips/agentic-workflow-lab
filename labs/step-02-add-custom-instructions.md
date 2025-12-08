@@ -5,6 +5,7 @@ Enhance your project context by adding testing guidelines to custom instructions
 1. **Open VS Code Command Palette** (`Ctrl+Shift+P` or `Cmd+Shift+P`)
 2. **Type and select**: `New instructions file`
 3. **Add testing-specific guidelines** to complement the existing context
+4. Inspiration: [testing-automation instructions](https://docs.github.com/en/copilot/tutorials/customization-library/custom-instructions/testing-automation)
 
 #### Visual Guide
 ![Lab Instructions](../img/lab%20instructions.png)

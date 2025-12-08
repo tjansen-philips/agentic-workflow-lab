@@ -22,13 +22,8 @@ A minimal task manager CLI for quick demos.
    complete 1
    ```
 
-4. **Clear Tasks**: Remove all tasks and reset ID counter
-   ```
-   clear
-   ```
-
 ## Implementation Guidelines
 
 ### Keep It Simple
-- File persistence implemented using JSON (in executable directory)
+- No file persistence required initially (in-memory is fine)
 

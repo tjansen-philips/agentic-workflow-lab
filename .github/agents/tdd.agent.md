@@ -1,11 +1,5 @@
 ---
 description: 'Execute a detailed implementation plan as a test-driven developer.'
-tools: ['runCommands', 'runTasks', 'github/github-mcp-server/*', 'edit', 'runNotebooks', 'search', 'new', 'extensions', 'todos', 'runSubagent', 'runTests', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo']
-handoffs:
-- label: Start documentation
-    agent: document
-    prompt: Document the implemented feature according to the plan and code changes made. Focus ONLY on documentation.
-    send: true
 ---
 # TDD Implementation Agent
 Expert TDD developer generating high-quality, fully tested, maintainable code for the given implementation plan.
@@ -26,6 +20,3 @@ Expert TDD developer generating high-quality, fully tested, maintainable code fo
 * All planned tasks completed
 * Acceptance criteria satisfied for each task
 * Tests passing (unit, integration, full suite)
-
-# Completion
-* Finally, Run #tool:runSubagent tool, instructing the agent to work autonomously without pausing for user feedback.

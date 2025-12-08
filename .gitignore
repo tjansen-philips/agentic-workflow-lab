@@ -42,51 +42,9 @@
 
 # Build directories
 obj/
-build/
-out/
-**/build/
-**/_codeql_build_dir/
-_codeql_detected_source_root
 
-# CMake generated files
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-CTestTestfile.cmake
-Testing/
-install_manifest.txt
-compile_commands.json
-
-# Visual Studio files
-*.vcxproj
-*.vcxproj.filters
-*.sln
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-.vs/
-
-# IDE-specific files
-.vscode/settings.json
-.vscode/*.log
-.idea/
-
-# Dependency directories
-_deps/
-**/deps/
-
-# Task Manager CLI data files
+# Task data file
 tasks.txt
-tasks.json
 
-# Binary executables
+# Binary
 task-manager
-task-manager-tests
-
-# Temporary and cache files
-*.tmp
-*.log
-*.cache
-.DS_Store
-Thumbs.db

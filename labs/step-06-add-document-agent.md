@@ -12,6 +12,7 @@ Create the document agent:
 2. Role: Focus ONLY on documentation
 3. Handoff: Configure it to receive from `tdd` (implementation) agent
 4. Test: Run the workflow (Plan → Implement → Document) or invoke the document agent directly for a quick trial
+5. Inspiration: [your first documentation agent](https://docs.github.com/en/copilot/tutorials/customization-library/custom-agents/your-first-custom-agent)
 
 #### Visual Guide
 ![Custom Agent Creation](../img/custom%20agent.png)
